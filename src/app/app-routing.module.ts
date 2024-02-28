@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomePageComponent } from './home-page/home-page.component';
-import { AboutPageComponent } from './about-page/about-page.component';
-import { LayoutComponent } from './layout/layout.component';
-import { CoursesPageComponent } from './courses-page/courses-page.component';
-import { ContactPageComponent } from './contact-page/contact-page.component';
+import { HomePageComponent } from './shared/home-page/home-page.component';
+import { AboutPageComponent } from './shared/about-page/about-page.component';
+import { LayoutComponent } from './shared/layout/layout.component';
+import { CoursesPageComponent } from './shared/courses-page/courses-page.component';
+import { ContactPageComponent } from './shared/contact-page/contact-page.component';
 
 const routes: Routes = [
   { path: '', component: LayoutComponent, children: [

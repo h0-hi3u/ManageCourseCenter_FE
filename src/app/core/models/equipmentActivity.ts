@@ -1,0 +1,17 @@
+import { Equipment } from "./equipment";
+import { Manager } from "./manager";
+import { Room } from "./room";
+
+export interface EquipmentActivity {
+    id: number;
+    managerId: number;
+    equipmentId: number;
+    roomId: number;
+    operateTime: Date;
+    description: string;
+    action: number;
+
+    equipment: Equipment;
+    manager: Manager;
+    room: Room;
+}

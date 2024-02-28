@@ -170,7 +170,26 @@
         </div>
     </div>
     <div class="owl-carousel courses-carousel" style="display: flex;">
-        <div class="courses-item position-relative">
+        <div class="courses-item position-relative" *ngFor="let course of listCourse">
+            <img class="img-fluid" src="../../assets/img/courses-6.jpg" alt>
+            <div class="courses-text">
+                <h4 class="text-center text-white px-3">{{course.name}}</h4>
+                <div class="border-top w-100 mt-3">
+                    <div class="d-flex justify-content-between p-4">
+                        <span class="text-white"><i
+                                class="fa fa-user mr-2"></i>Jhon Doe</span>
+                        <span class="text-white"><i
+                                class="fa fa-star mr-2"></i>{{course.price}}
+                            <small>({{course.price}})</small></span>
+                    </div>
+                </div>
+                <div class="w-100 bg-white text-center p-4">
+                    <a class="btn btn-primary" href="detail.html">Course
+                        Detail</a>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="courses-item position-relative">
             <img class="img-fluid" src="../../assets/img/courses-1.jpg" alt>
             <div class="courses-text">
                 <h4 class="text-center text-white px-3">Web design & development
@@ -289,7 +308,7 @@
                         Detail</a>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
     <div class="row justify-content-center bg-image mx-0 mb-5">
         <div class="col-lg-6 py-5">

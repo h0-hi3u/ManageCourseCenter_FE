@@ -5,20 +5,24 @@ import { AboutPageComponent } from './shared/about-page/about-page.component';
 import { LayoutComponent } from './shared/layout/layout.component';
 import { CoursesPageComponent } from './shared/courses-page/courses-page.component';
 import { ContactPageComponent } from './shared/contact-page/contact-page.component';
+import { CourseDetailPageComponent } from './shared/course-detail-page/course-detail-page.component';
 
 const routes: Routes = [
-  { path: '', component: LayoutComponent, children: [
-    { path: '', component: HomePageComponent },
-    { path: 'about', component: AboutPageComponent },
-    { path: 'courses', component: CoursesPageComponent},
-    { path: 'contact', component: ContactPageComponent}
-  ]},
+  {
+    path: '',
+    component: LayoutComponent,
+    children: [
+      { path: '', component: HomePageComponent },
+      { path: 'about', component: AboutPageComponent },
+      { path: 'course-detail', component: CourseDetailPageComponent },
+      { path: 'courses', component: CoursesPageComponent },
+      { path: 'contact', component: ContactPageComponent },
+    ],
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { 
-
-}
+export class AppRoutingModule {}

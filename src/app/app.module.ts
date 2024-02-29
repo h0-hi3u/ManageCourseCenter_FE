@@ -9,6 +9,7 @@ import { LayoutComponent } from './shared/layout/layout.component';
 import { CoursesPageComponent } from './shared/courses-page/courses-page.component';
 import { ContactPageComponent } from './shared/contact-page/contact-page.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CourseDetailPageComponent } from './shared/course-detail-page/course-detail-page.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
     AboutPageComponent,
     LayoutComponent,
     CoursesPageComponent,
-    ContactPageComponent
+    ContactPageComponent,
+    CourseDetailPageComponent
   ],
   imports: [
     BrowserModule,

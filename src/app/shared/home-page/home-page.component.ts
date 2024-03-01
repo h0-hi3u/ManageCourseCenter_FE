@@ -18,6 +18,6 @@ export class HomePageComponent implements OnInit {
       })
   }
   public goToCourseDetail(id: number) {
-    this.router.navigate(['/course-detail']);
+    this.router.navigate([`/course-detail/${id}`]);
   }
 }

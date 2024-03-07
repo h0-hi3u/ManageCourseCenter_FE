@@ -5,39 +5,41 @@
     align-items: center;"
 >
     <div class="login-box">
-        <div class="login-header">
-            <header>Welcome</header>
-            <p>We are happy to have you back!</p>
-        </div>
-        <div class="input-box">
-            <input type="text" class="input-field" id="email" autocomplete="off" required>
-            <label for="email">Email</label>
-        </div>
-        <div class="input-box">
-            <input type="password" class="input-field" id="password" autocomplete="off" required>
-            <label for="password">Password</label>
-        </div>
-        <div class="input-box">
-            Role:
-            <select name="role" class="input-field" id="role">
-                <option value="manager">Manager</option>
-                <option value="teacher">Teacher</option>
-                <option value="parent">Parent</option>
-                <option value="children">Student</option>
-            </select>
-        </div>
-        <div class="forgot">
-            <section>
-                <input type="checkbox" id="check">
-                <label for="check">Remember me</label>
-            </section>
-            <section>
-                <a href="forget-password.html" class="forgot-link">Forgot password?</a>
-            </section>
-        </div>
-        <div>
-            <button class="sign-in" type="submit">Log In</button>
-        </div>
+        <form [formGroup]="loginForm" (ngSubmit)="submit()">
+            <div class="login-header">
+                <header>Welcome</header>
+                <p>We are happy to have you back!</p>
+            </div>
+            <div class="input-box">
+                <input type="text" class="input-field invalid" id="email" autocomplete="off" formControlName="email" [ngClass]="{'invalid' : loginForm.get('email')?.invalid && loginForm.get('email')?.touched}">
+                <label for="email">Email</label>
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field" id="password" autocomplete="off" formControlName="password" [ngClass]="{'invalid' : loginForm.get('password')?.invalid && loginForm.get('password')?.touched}">
+                <label for="password">Password</label>
+            </div>
+            <div class="input-box">
+                Role:
+                <select name="role" class="input-field" id="role" formControlName="role">
+                    <option value="manager">Manager</option>
+                    <option value="teacher">Teacher</option>
+                    <option value="parent">Parent</option>
+                    <option value="children">Student</option>
+                </select>
+            </div>
+            <div class="forgot">
+                <section>
+                    <input type="checkbox" id="check">
+                    <label for="check">Remember me</label>
+                </section>
+                <section>
+                    <a href="forget-password.html" class="forgot-link">Forgot password?</a>
+                </section>
+            </div>
+            <div>
+                <button class="sign-in" type="submit" [disabled]="loginForm.invalid">Log In</button>
+            </div>
+        </form>
         <div class="middle-text">
             <hr>
             <p class="or-text">Or</p>

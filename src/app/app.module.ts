@@ -10,6 +10,18 @@ import { CoursesPageComponent } from './shared/courses-page/courses-page.compone
 import { ContactPageComponent } from './shared/contact-page/contact-page.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CourseDetailPageComponent } from './shared/course-detail-page/course-detail-page.component';
+import { ForgotPasswordPageComponent } from './shared/forgot-password-page/forgot-password-page.component';
+import { LoginPageComponent } from './shared/login-page/login-page.component';
+import { RegisterPageComponent } from './shared/register-page/register-page.component';
+import { ChildrenPageComponent } from './shared/children-page/children-page.component';
+import { ChildrenClassPageComponent } from './shared/children-page/children-class-page/children-class-page.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { AdminPageComponent } from './shared/admin-page/admin-page.component';
+import { OwnerPageComponent } from './shared/owner-page/owner-page.component';
+import { ParentPageComponent } from './shared/parent-page/parent-page.component';
+import { StaffPageComponent } from './shared/staff-page/staff-page.component';
+import { TeacherPageComponent } from './shared/teacher-page/teacher-page.component';
+import { ProfilePageComponent } from './shared/profile-page/profile-page.component';
 
 @NgModule({
   declarations: [
@@ -19,12 +31,24 @@ import { CourseDetailPageComponent } from './shared/course-detail-page/course-de
     LayoutComponent,
     CoursesPageComponent,
     ContactPageComponent,
-    CourseDetailPageComponent
+    CourseDetailPageComponent,
+    ForgotPasswordPageComponent,
+    LoginPageComponent,
+    RegisterPageComponent,
+    ChildrenPageComponent,
+    ChildrenClassPageComponent,
+    AdminPageComponent,
+    OwnerPageComponent,
+    ParentPageComponent,
+    StaffPageComponent,
+    TeacherPageComponent,
+    ProfilePageComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

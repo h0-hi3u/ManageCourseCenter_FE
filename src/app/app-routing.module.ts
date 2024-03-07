@@ -6,6 +6,17 @@ import { LayoutComponent } from './shared/layout/layout.component';
 import { CoursesPageComponent } from './shared/courses-page/courses-page.component';
 import { ContactPageComponent } from './shared/contact-page/contact-page.component';
 import { CourseDetailPageComponent } from './shared/course-detail-page/course-detail-page.component';
+import { ForgotPasswordPageComponent } from './shared/forgot-password-page/forgot-password-page.component';
+import { LoginPageComponent } from './shared/login-page/login-page.component';
+import { RegisterPageComponent } from './shared/register-page/register-page.component';
+import { ChildrenPageComponent } from './shared/children-page/children-page.component';
+import { ChildrenClassPageComponent } from './shared/children-page/children-class-page/children-class-page.component';
+import { AdminPageComponent } from './shared/admin-page/admin-page.component';
+import { OwnerPageComponent } from './shared/owner-page/owner-page.component';
+import { ParentPageComponent } from './shared/parent-page/parent-page.component';
+import { StaffPageComponent } from './shared/staff-page/staff-page.component';
+import { TeacherPageComponent } from './shared/teacher-page/teacher-page.component';
+import { ProfilePageComponent } from './shared/profile-page/profile-page.component';
 
 const routes: Routes = [
   {
@@ -19,6 +30,22 @@ const routes: Routes = [
       { path: 'contact', component: ContactPageComponent },
     ],
   },
+  {
+    path: 'children',
+    component: ChildrenPageComponent,
+    children: [
+      { path: '', component: ChildrenClassPageComponent}
+    ],
+  },
+  { path: "forgot-password", component: ForgotPasswordPageComponent},
+  { path: "login", component: LoginPageComponent},
+  { path: "register", component: RegisterPageComponent},
+  { path: 'admin', component: AdminPageComponent}, 
+  { path: 'owner', component: OwnerPageComponent},
+  { path: 'parent', component: ParentPageComponent},
+  { path: 'staff', component: StaffPageComponent},
+  { path: 'teacher', component: TeacherPageComponent},
+  { path: 'profile', component: ProfilePageComponent}
 ];
 
 @NgModule({

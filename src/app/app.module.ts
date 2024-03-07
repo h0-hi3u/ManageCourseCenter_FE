@@ -22,6 +22,7 @@ import { ParentPageComponent } from './shared/parent-page/parent-page.component'
 import { StaffPageComponent } from './shared/staff-page/staff-page.component';
 import { TeacherPageComponent } from './shared/teacher-page/teacher-page.component';
 import { ProfilePageComponent } from './shared/profile-page/profile-page.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { ProfilePageComponent } from './shared/profile-page/profile-page.compone
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

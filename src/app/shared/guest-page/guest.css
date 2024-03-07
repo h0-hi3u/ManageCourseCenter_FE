@@ -180,12 +180,21 @@ hr {
     transition: background-color 0.3s ease;
 }
 
+.sign-in-google:hover {
+    background-color: #832d22;
+}
+
 button {
+    background: #007bff;
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-radius: 5px;
     cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
 }
 
 .input-google {

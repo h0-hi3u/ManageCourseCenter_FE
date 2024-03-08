@@ -41,8 +41,8 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-4 col-md-6 pb-4" *ngFor="let course of listCourse">
-                <a class="courses-list-item position-relative d-block overflow-hidden mb-2" (click)="goToCourseDetail(course.id)">
+            <div class="col-lg-4 col-md-6 pb-4" *ngFor="let course of listCourse" (click)="goToCourseDetail(course.id)">
+                <a class="courses-list-item position-relative d-block overflow-hidden mb-2">
                     <img class="img-fluid" src="../../assets/img/courses-6.jpg" alt="">
                     <div class="courses-text">
                         <h4 class="text-center text-white px-3">{{course.name}}</h4>

@@ -20,4 +20,7 @@ export class HomePageComponent implements OnInit {
   public goToCourseDetail(id: number) {
     this.router.navigate([`/course-detail/${id}`]);
   }
+  public goToRegister() {
+    this.router.navigate(['/register']);
+  }
 }

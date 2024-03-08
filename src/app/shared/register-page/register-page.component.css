@@ -73,6 +73,9 @@ body {
     border-radius: 3px;
     outline: none;
 }
+.input-box .invalid {
+    border: 1px red solid;
+}
 
 .input-box input[type="password"] {
     margin-bottom: 10px;

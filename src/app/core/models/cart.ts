@@ -1,5 +1,5 @@
 import { CartItem } from "./cartItem";
-import { Parent } from "./parent";
+import { Parent } from "./parentDto/parent";
 import { Payment } from "./payment";
 
 export interface Cart {

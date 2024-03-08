@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Equipment</title>
+
+    <link rel="stylesheet" href="manage.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="add-new-container">
+            <div class="header">Equipment List</div>
+            <section>
+                <button class="add-button">Add New</button>
+                <button class="export-button">Export</button>
+            </section>
+        </div>
+        <div class="search-filter-container">
+            <div class="search-container">
+                <input type="text" placeholder="Search...">
+                <button class="search-button">Search</button>
+            </div>
+            <div class="filter-container">
+                <select>
+                    <option value="equipment">Equipment Name</option>
+                    <option value="type">Type</option>
+                    <option value="status">Status</option>
+                </select>
+                <select>
+                    <option value="all">Default</option>
+                    <option value="active">Inscreasing</option>
+                    <option value="inactive">Descreasing</option>
+                </select>
+                <button class="filter-button">Filter</button>
+            </div>
+        </div>
+
+        <table class="equipment-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>E name</td>
+                    <td>Type</td>
+                    <td>
+                        <select>
+                            <option value="available">Available</option>
+                            <option value="using">Using</option>
+                            <option value="maintaining">Maintaining</option>
+                            <option value="uavailable">Unavailable</option>
+                        </select>
+                    </td>
+                    <td>
+                        <a href="#">Detail</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>E name</td>
+                    <td>Type</td>
+                    <td>
+                        <select>
+                            <option value="available">Available</option>
+                            <option value="using">Using</option>
+                            <option value="maintaining">Maintaining</option>
+                            <option value="uavailable">Unavailable</option>
+                        </select>
+                    </td>
+                    <td>
+                        <a href="#">Detail</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>E name</td>
+                    <td>Type</td>
+                    <td>
+                        <select>
+                            <option value="available">Available</option>
+                            <option value="using">Using</option>
+                            <option value="maintaining">Maintaining</option>
+                            <option value="uavailable">Unavailable</option>
+                        </select>
+                    </td>
+                    <td>
+                        <a href="#">Detail</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>E name</td>
+                    <td>Type</td>
+                    <td>
+                        <select>
+                            <option value="available">Available</option>
+                            <option value="using">Using</option>
+                            <option value="maintaining">Maintaining</option>
+                            <option value="uavailable">Unavailable</option>
+                        </select>
+                    </td>
+                    <td>
+                        <a href="#">Detail</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>E name</td>
+                    <td>Type</td>
+                    <td>
+                        <select>
+                            <option value="available">Available</option>
+                            <option value="using">Using</option>
+                            <option value="maintaining">Maintaining</option>
+                            <option value="uavailable">Unavailable</option>
+                        </select>
+                    </td>
+                    <td>
+                        <a href="#">Detail</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

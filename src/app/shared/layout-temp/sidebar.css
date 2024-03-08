@@ -75,3 +75,10 @@ body {
     text-decoration: none;
     color: aliceblue;
 }
+
+.list li:last-child {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 110px;
+}

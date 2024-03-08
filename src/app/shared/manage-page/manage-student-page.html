@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Student</title>
+
+    <link rel="stylesheet" href="manage.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="add-new-container">
+            <div class="header">Student List</div>
+            <section>
+                <button class="export-button">Export</button>
+            </section>
+        </div>
+        <div class="search-filter-container">
+            <div class="search-container">
+                <input type="text" placeholder="Search...">
+                <button class="search-button">Search</button>
+            </div>
+            <div class="filter-container">
+                <select>
+                    <option value="parent">Parent Name</option>
+                    <option value="student">Student Name</option>
+                    <option value="username">Username</option>
+                    <option value="birth">Birth Day</option>
+                    <option value="gender">Gender</option>
+                    <option value="status">Status</option>
+                </select>
+                <select>
+                    <option value="all">Default</option>
+                    <option value="active">Inscreasing</option>
+                    <option value="inactive">Descreasing</option>
+                </select>
+                <button class="filter-button">Filter</button>
+            </div>
+        </div>
+
+        <table class="children-table">
+            <thead>
+                <tr>
+                    <th>Parent Name</th>
+                    <th>Student Name</th>
+                    <th>Username</th>
+                    <th>Birth Date</th>
+                    <th>Gender</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>P Name</td>
+                    <td>S Name</td>
+                    <td>Username</td>
+                    <td>2024-03-06</td>
+                    <td>Gender</td>
+                    <td>Active</td>
+                    <td>
+                        <a href="#">Detail</a>
+                        <a href="#">Suspend</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>P Name</td>
+                    <td>S Name</td>
+                    <td>Username</td>
+                    <td>2024-03-06</td>
+                    <td>Gender</td>
+                    <td>Active</td>
+                    <td>
+                        <a href="#">Detail</a>
+                        <a href="#">Suspend</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>P Name</td>
+                    <td>S Name</td>
+                    <td>Username</td>
+                    <td>2024-03-06</td>
+                    <td>Gender</td>
+                    <td>Active</td>
+                    <td>
+                        <a href="#">Detail</a>
+                        <a href="#">Suspend</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>P Name</td>
+                    <td>S Name</td>
+                    <td>Username</td>
+                    <td>2024-03-06</td>
+                    <td>Gender</td>
+                    <td>Active</td>
+                    <td>
+                        <a href="#">Detail</a>
+                        <a href="#">Suspend</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>P Name</td>
+                    <td>S Name</td>
+                    <td>Username</td>
+                    <td>2024-03-06</td>
+                    <td>Gender</td>
+                    <td>Active</td>
+                    <td>
+                        <a href="#">Detail</a>
+                        <a href="#">Suspend</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

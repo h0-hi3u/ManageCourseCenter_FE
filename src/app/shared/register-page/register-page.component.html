@@ -1,4 +1,3 @@
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></script>
 <div class="wrapper" 
 style="width: 100%; 
 height: 100vh; display: flex; 
@@ -8,41 +7,43 @@ align-items: center;">
         <div class="login-header">
             <header>Create An Account</header>
         </div>
+        <form [formGroup]="registerForm" (ngSubmit)="register()">
         <div class="input-box">
-            <input type="text" class="input-field" id="fullname" autocomplete="off" required>
+            <input type="text" class="input-field" id="fullname" autocomplete="off" formControlName="fullName" [ngClass]="{'invalid' : registerForm.get('fullName')?.invalid && registerForm.get('fullName')?.touched}">
             <label for="fullname">Full Name</label>
         </div>
         <div class="input-box">
-            <input type="text" class="input-field" id="email" autocomplete="off" required>
+            <input type="text" class="input-field" id="email" autocomplete="off" formControlName="email" [ngClass]="{'invalid' : registerForm.get('email')?.invalid && registerForm.get('email')?.touched}">
             <label for="email">Email</label>
         </div>
         <div class="input-box">
-            <input type="password" class="input-field" id="password" autocomplete="off" required>
+            <input type="password" class="input-field" id="password" autocomplete="off" formControlName="password" [ngClass]="{'invalid' : registerForm.get('password')?.invalid && registerForm.get('password')?.touched}">
             <label for="password">Password</label>
         </div>
-        <div class="input-box">
+        <!-- <div class="input-box">
             <input type="password" class="input-field" id="confirmpassword" autocomplete="off" required>
             <label for="confirmpassword">Confirm Password</label>
-        </div>
+        </div> -->
         <div class="input-box">
-            <input type="tel" class="input-field" id="phone" autocomplete="off" required>
+            <input type="tel" class="input-field" id="phone" autocomplete="off" formControlName="phone" [ngClass]="{'invalid' : (registerForm.get('phone')?.invalid && registerForm.get('phone')?.touched) || (registerForm.get('phoneNumber')?.hasError('invalidStart') || registerForm.get('phoneNumber')?.hasError('invalidLength')) && registerForm.get('phoneNumber')?.touched}">
             <label for="phone">Phone</label>
         </div>
         <div class="input-box">
-            <input type="text" class="input-field" id="birth" autocomplete="off" required>
+            <input type="date" class="input-field" id="birth" min="1950-01-01" max="2006-01-01" formControlName="birthDay" [ngClass]="{'invalid' : registerForm.get('birthDay')?.invalid && registerForm.get('birthDay')?.touched}">
             <label for="birth">Birth Date</label>
         </div>
         <div class="input-box">
             Gender:
-            <select name="role" class="input-field" id="gender">
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-                <option value="other">Other</option>
+            <select name="role" class="input-field" id="gender" formArrayName="gender">
+                <option value="1">Male</option>
+                <option value="2">Female</option>
+                <option value="3">Other</option>
             </select>
         </div>
         <div>
-            <button class="sign-in" type="submit">Register</button>
+            <button class="sign-in" type="submit" [disabled]="registerForm.invalid">Register</button>
         </div>
+    </form>
         <div class="middle-text">
             <hr>
             <p class="or-text">Or</p>

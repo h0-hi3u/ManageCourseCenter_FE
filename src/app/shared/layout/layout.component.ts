@@ -22,4 +22,7 @@ export class LayoutComponent {
   public goToContact(): void {
     this.router.navigate(['/contact']);
   }
+  public goToRegister(): void {
+    this.router.navigate(['/register']);
+  }
 }

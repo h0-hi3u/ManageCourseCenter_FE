@@ -23,6 +23,15 @@ import { StaffPageComponent } from './shared/staff-page/staff-page.component';
 import { TeacherPageComponent } from './shared/teacher-page/teacher-page.component';
 import { ProfilePageComponent } from './shared/profile-page/profile-page.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ChildrenFeedbackPageComponent } from './shared/children-page/children-feedback-page/children-feedback-page.component';
+import { ParentFeedbackPageComponent } from './shared/parent-page/parent-feedback-page/parent-feedback-page.component';
+import { ParentManageChildrenPageComponent } from './shared/parent-page/parent-manage-children-page/parent-manage-children-page.component';
+import { ParentManagePaymentPageComponent } from './shared/parent-page/parent-manage-payment-page/parent-manage-payment-page.component';
+import { StaffReportPageComponent } from './shared/staff-page/staff-report-page/staff-report-page.component';
+import { StaffRoomPageComponent } from './shared/staff-page/staff-room-page/staff-room-page.component';
+import { TeacherClassPageComponent } from './shared/teacher-page/teacher-class-page/teacher-class-page.component';
+import { TeacherFeedbackPageComponent } from './shared/teacher-page/teacher-feedback-page/teacher-feedback-page.component';
+import { TeacherReportPageComponent } from './shared/teacher-page/teacher-report-page/teacher-report-page.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +53,15 @@ import { ReactiveFormsModule } from '@angular/forms';
     StaffPageComponent,
     TeacherPageComponent,
     ProfilePageComponent,
+    ChildrenFeedbackPageComponent,
+    ParentFeedbackPageComponent,
+    ParentManageChildrenPageComponent,
+    ParentManagePaymentPageComponent,
+    StaffReportPageComponent,
+    StaffRoomPageComponent,
+    TeacherClassPageComponent,
+    TeacherFeedbackPageComponent,
+    TeacherReportPageComponent,
   ],
   imports: [
     BrowserModule,

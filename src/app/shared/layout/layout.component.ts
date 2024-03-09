@@ -32,7 +32,9 @@ export class LayoutComponent implements OnInit{
     this.router.navigate(['/contact']);
   }
   public goToRegister(): void {
-    this.active = 'register';
     this.router.navigate(['/register']);
+  }
+  public goToLogin(): void {
+    this.router.navigate(['/login']);
   }
 }

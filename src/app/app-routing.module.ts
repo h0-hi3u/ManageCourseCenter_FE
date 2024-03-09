@@ -17,6 +17,15 @@ import { ParentPageComponent } from './shared/parent-page/parent-page.component'
 import { StaffPageComponent } from './shared/staff-page/staff-page.component';
 import { TeacherPageComponent } from './shared/teacher-page/teacher-page.component';
 import { ProfilePageComponent } from './shared/profile-page/profile-page.component';
+import { ChildrenFeedbackPageComponent } from './shared/children-page/children-feedback-page/children-feedback-page.component';
+import { ParentFeedbackPageComponent } from './shared/parent-page/parent-feedback-page/parent-feedback-page.component';
+import { ParentManageChildrenPageComponent } from './shared/parent-page/parent-manage-children-page/parent-manage-children-page.component';
+import { ParentManagePaymentPageComponent } from './shared/parent-page/parent-manage-payment-page/parent-manage-payment-page.component';
+import { StaffReportPageComponent } from './shared/staff-page/staff-report-page/staff-report-page.component';
+import { StaffRoomPageComponent } from './shared/staff-page/staff-room-page/staff-room-page.component';
+import { TeacherClassPageComponent } from './shared/teacher-page/teacher-class-page/teacher-class-page.component';
+import { TeacherFeedbackPageComponent } from './shared/teacher-page/teacher-feedback-page/teacher-feedback-page.component';
+import { TeacherReportPageComponent } from './shared/teacher-page/teacher-report-page/teacher-report-page.component';
 
 const routes: Routes = [
   {
@@ -34,18 +43,53 @@ const routes: Routes = [
     path: 'children',
     component: ChildrenPageComponent,
     children: [
-      { path: '', component: ChildrenClassPageComponent}
+      { path: '', component: ChildrenClassPageComponent },
+      { path: 'feedback', component: ChildrenFeedbackPageComponent },
     ],
   },
-  { path: "forgot-password", component: ForgotPasswordPageComponent},
-  { path: "login", component: LoginPageComponent},
-  { path: "register", component: RegisterPageComponent},
-  { path: 'admin', component: AdminPageComponent}, 
-  { path: 'owner', component: OwnerPageComponent},
-  { path: 'parent', component: ParentPageComponent},
-  { path: 'staff', component: StaffPageComponent},
-  { path: 'teacher', component: TeacherPageComponent},
-  { path: 'profile', component: ProfilePageComponent}
+  {
+    path: 'admin',
+    component: AdminPageComponent,
+    // children: [
+    //   {path: '', }
+    // ]
+  },
+
+  {
+    path: 'owner',
+    component: OwnerPageComponent,
+    //  {path: }
+  },
+  {
+    path: 'parent',
+    component: ParentPageComponent,
+    children: [
+      { path: '', component: ParentManageChildrenPageComponent },
+      { path: 'feedback', component: ParentFeedbackPageComponent },
+      { path: 'payment', component: ParentManagePaymentPageComponent },
+    ],
+  },
+  {
+    path: 'staff',
+    component: StaffPageComponent,
+    children: [
+      { path: '', component: StaffReportPageComponent },
+      { path: 'room', component: StaffRoomPageComponent },
+    ],
+  },
+  {
+    path: 'teacher',
+    component: TeacherPageComponent,
+    children: [
+      { path: '', component: TeacherClassPageComponent },
+      { path: 'feedback', component: TeacherFeedbackPageComponent },
+      { path: 'report', component: TeacherReportPageComponent },
+    ],
+  },
+  { path: 'profile', component: ProfilePageComponent },
+  { path: 'forgot-password', component: ForgotPasswordPageComponent },
+  { path: 'login', component: LoginPageComponent },
+  { path: 'register', component: RegisterPageComponent },
 ];
 
 @NgModule({

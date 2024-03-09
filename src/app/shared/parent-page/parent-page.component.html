@@ -1,4 +1,4 @@
-<div class="sidebar-container">
+<div class="sidebar-container" style="display: flex;">
     <div class="sidebar" id="sidebar">
         <div id="head">
             <p class="logo">OCEMS</p>
@@ -9,9 +9,12 @@
             <li><a href="#">Courses</a></li>
             <li><a href="#">Feedbacks</a></li>
             <li><a href="#">Payments</a></li>
+            <li><a href="#">Cart</a></li>
             <li><a href="#">Profile</a></li>
             <li><a href="#">Logout</a></li>
         </ul>
     </div>
-    <router-outlet></router-outlet>
+    <div style="width: 85%;">
+        <router-outlet></router-outlet>
+    </div>
 </div>

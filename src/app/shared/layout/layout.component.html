@@ -50,10 +50,9 @@
                 <a style="cursor: pointer;" (click)="goToHome()" [ngClass]="{'active': active == ''}" class="nav-item nav-link">Home</a>
                 <a style="cursor: pointer;" (click)="goToAbout()" [ngClass]="{'active': active == 'about'}" class="nav-item nav-link">About</a>
                 <a style="cursor: pointer;" (click)="goToCourse()" [ngClass]="{'active': active == 'courses'}" class="nav-item nav-link">Courses</a>
-                <a style="cursor: pointer;" (click)="goToContact()" [ngClass]="{'active': active == 'contact'}" class="nav-item nav-link">Contact</a>
+                <!-- <a style="cursor: pointer;" (click)="goToContact()" [ngClass]="{'active': active == 'contact'}" class="nav-item nav-link">Contact</a> -->
             </div>
-            <button class="btn btn-primary py-2 px-4 d-none d-lg-block" (click)="goToRegister()">Join
-                Us</button>
+            <button class="btn btn-primary py-2 px-4 d-none d-lg-block" (click)="goToLogin()">Log in</button>
         </div>
     </nav>
 </div>

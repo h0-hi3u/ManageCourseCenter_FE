@@ -1,192 +1,3 @@
-/* .wrapper {
-  display: flex;
-  height: 100vh;
-  width: 100%;
-}
-
-.wrapper .nav-left {
-  height: 100%;
-  width: 15%;
-  background-color: #4c71de;
-  color: white;
-}
-.wrapper .nav-left * {
-  width: 100%;
-  padding: 10px 20px;
-}
-.wrapper .nav-left div {
-  cursor: pointer;
-}
-.wrapper .nav-left .logo-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 80px;
-  font-weight: 800;
-}
-.wrapper .nav-left .info {
-  padding: 10px 20px;
-  font-size: 11px;
-  font-weight: 800;
-  border-top: 1px white solid;
-}
-.wrapper .content-nav-top {
-  width: 85%;
-}
-.wrapper .content-nav-top .nav-top {
-  height: 80px;
-  width: 100%;
-  box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
-}
-.wrapper .content-nav-top .nav-top .option {
-  float: right;
-  display: flex;
-  align-items: center;
-  height: 100%;
-}
-
-.wrapper .content-nav-top .nav-top .option .alarm-icon {
-  position: relative;
-  padding-right: 15px;
-  border-right: 1px gray solid;
-}
-.wrapper .content-nav-top .nav-top .option .alarm-icon .show-more-alert {
-    cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 12px;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  padding: 10px 0 10px 10px;
-  border-top: 1px rgb(201, 198, 198) solid;
-  box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-.wrapper .content-nav-top .nav-top .option .alarm-icon .show-more-alert:hover {
-    background-color: rgb(226, 229, 230);
-}
-.wrapper .content-nav-top .nav-top .option .alarm-icon:hover .dropdown-notion {
-  display: block;
-}
-.wrapper
-  .content-nav-top
-  .nav-top
-  .option
-  .alarm-icon
-  .dropdown-notion::before {
-  content: "";
-  height: 10px;
-  position: absolute;
-  left: 0;
-  right: 0;
-  background-color: transparent;
-  transform: translateY(-100%);
-}
-.wrapper .content-nav-top .nav-top .option .alarm-icon .dropdown-notion {
-  position: absolute;
-  right: 10px;
-  top: 30px;
-  width: 250px;
-  display: none;
-}
-.notion {
-    cursor: pointer;
-  display: flex;
-  align-items: center;
-  box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
-  padding: 5px 0;
-  border-top: 1px rgb(201, 198, 198) solid;
-}
-.notion:hover {
-  background-color: rgb(226, 229, 230);
-}
-.notion .icon-type {
-  padding: 10px;
-}
-.notion .icon-type .wrapper-icon-type {
-  width: 40px;
-  height: 40px;
-  background-color: #4c71de;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.notion .icon-type .wrapper-icon-type fa-icon {
-  color: white;
-}
-.notion .text-notion .time-notion {
-  color: gray;
-  font-size: small;
-}
-.notion .text-notion .message-notion {
-  color: black;
-  font-size: 14px;
-  font-weight: 600;
-}
-.wrapper .content-nav-top .nav-top .option .alarm-icon .number-notion {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  top: -5px;
-  right: 7px;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background-color: red;
-  color: white;
-}
-.wrapper .content-nav-top .nav-top .option .name-avatar {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 30px 0 0;
-  position: relative;
-}
-.wrapper .content-nav-top .nav-top .option .name-avatar .dropdown-person {
-  display: none;
-  position: absolute;
-  top: 60px;
-  width: 90%;
-  background-color: white;
-  box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
-  border-radius: 10px;
-  z-index: 99;
-}
-.wrapper
-  .content-nav-top
-  .nav-top
-  .option
-  .name-avatar
-  .dropdown-person::before {
-  content: "";
-  height: 10px;
-  position: absolute;
-  left: 0;
-  right: 0;
-  background-color: transparent;
-  transform: translateY(-100%);
-}
-.wrapper .content-nav-top .nav-top .option .name-avatar:hover .dropdown-person {
-  display: block;
-}
-.wrapper .content-nav-top .nav-top .option .name-avatar .name {
-  padding: 0 10px;
-}
-.wrapper .content-nav-top .nav-top .option .name-avatar .avatar {
-  height: 50px;
-  width: 50px;
-}
-.wrapper .content-nav-top .nav-top .option .name-avatar .avatar img {
-  border-radius: 50%;
-  height: 50px;
-  width: 50px;
-} */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,700&display=swap');
 
 body {
@@ -202,7 +13,7 @@ body {
     background: #007bff;
     transition: all .5s;
     max-width: 1000px;
-    width: 190px;
+    width: 15%;
     height: 100vh;
 }
 
@@ -263,4 +74,11 @@ body {
 .list a {
     text-decoration: none;
     color: aliceblue;
+}
+
+.list li:last-child {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 110px;
 }

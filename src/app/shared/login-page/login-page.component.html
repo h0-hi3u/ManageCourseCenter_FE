@@ -10,6 +10,7 @@
                 <header>Welcome</header>
                 <p>We are happy to have you back!</p>
             </div>
+            <div style="margin-bottom: 20px; color: red;" *ngIf="messageLogin != ''">{{messageLogin}}</div>
             <div class="input-box">
                 <input type="text" class="input-field invalid" id="email" autocomplete="off" formControlName="email" [ngClass]="{'invalid' : loginForm.get('email')?.invalid && loginForm.get('email')?.touched}">
                 <label for="email">Email</label>

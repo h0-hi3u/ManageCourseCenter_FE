@@ -12,7 +12,7 @@ import { RegisterPageComponent } from './shared/register-page/register-page.comp
 import { ChildrenPageComponent } from './shared/children-page/children-page.component';
 import { ChildrenClassPageComponent } from './shared/children-page/children-class-page/children-class-page.component';
 import { AdminPageComponent } from './shared/admin-page/admin-page.component';
-import { OwnerPageComponent } from './shared/owner-page/owner-page.component';
+import { ManagePageComponent } from './shared/manage-page/manage-page.component';
 import { ParentPageComponent } from './shared/parent-page/parent-page.component';
 import { StaffPageComponent } from './shared/staff-page/staff-page.component';
 import { TeacherPageComponent } from './shared/teacher-page/teacher-page.component';
@@ -56,8 +56,8 @@ const routes: Routes = [
   },
 
   {
-    path: 'owner',
-    component: OwnerPageComponent,
+    path: 'manager',
+    component: ManagePageComponent,
     //  {path: }
   },
   {

@@ -47,7 +47,35 @@ export class LoginPageComponent {
         .subscribe((res: ResponseDto) => {
           if (res.isSuccess) {
             this.router.navigate(['/manager']);
-          }else {
+          } else {
+            this.messageLogin = 'Incorrect password or email!';
+          }
+        });
+    } else if (this.getForm.role.value == 'admin') {
+      this.authService
+        .loginForAdmin(
+          this.getForm.email.value || '',
+          this.getForm.password.value || ''
+        )
+        .subscribe((res: ResponseDto) => {
+          console.log(res);
+          
+          if (res.isSuccess) {
+            this.router.navigate(['/admin']);
+          } else {
+            this.messageLogin = 'Incorrect password or email!';
+          }
+        });
+    } else if (this.getForm.role.value == 'staff') {
+      this.authService
+        .loginForStaff(
+          this.getForm.email.value || '',
+          this.getForm.password.value || ''
+        )
+        .subscribe((res: ResponseDto) => {
+          if (res.isSuccess) {
+            this.router.navigate(['/staff']);
+          } else {
             this.messageLogin = 'Incorrect password or email!';
           }
         });
@@ -60,7 +88,7 @@ export class LoginPageComponent {
         .subscribe((res: ResponseDto) => {
           if (res.isSuccess) {
             this.router.navigate(['/teacher']);
-          }else {
+          } else {
             this.messageLogin = 'Incorrect password or email!';
           }
         });
@@ -73,7 +101,7 @@ export class LoginPageComponent {
         .subscribe((res: ResponseDto) => {
           if (res.isSuccess) {
             this.router.navigate(['/parent']);
-          }else {
+          } else {
             this.messageLogin = 'Incorrect password or email!';
           }
         });

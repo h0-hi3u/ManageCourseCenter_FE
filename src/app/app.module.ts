@@ -17,7 +17,7 @@ import { ChildrenPageComponent } from './shared/children-page/children-page.comp
 import { ChildrenClassPageComponent } from './shared/children-page/children-class-page/children-class-page.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AdminPageComponent } from './shared/admin-page/admin-page.component';
-import { OwnerPageComponent } from './shared/owner-page/owner-page.component';
+import { ManagePageComponent } from './shared/manage-page/manage-page.component';
 import { ParentPageComponent } from './shared/parent-page/parent-page.component';
 import { StaffPageComponent } from './shared/staff-page/staff-page.component';
 import { TeacherPageComponent } from './shared/teacher-page/teacher-page.component';
@@ -48,7 +48,7 @@ import { TeacherReportPageComponent } from './shared/teacher-page/teacher-report
     ChildrenPageComponent,
     ChildrenClassPageComponent,
     AdminPageComponent,
-    OwnerPageComponent,
+    ManagePageComponent,
     ParentPageComponent,
     StaffPageComponent,
     TeacherPageComponent,

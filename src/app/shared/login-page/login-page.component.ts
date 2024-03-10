@@ -33,6 +33,7 @@ export class LoginPageComponent {
         )
         .subscribe((res: ResponseDto) => {
           if (res.isSuccess) {
+            localStorage.setItem('childrenId', res.data.id);
             this.router.navigate(['/children']);
           } else {
             this.messageLogin = 'Incorrect password or email!';
@@ -46,6 +47,7 @@ export class LoginPageComponent {
         )
         .subscribe((res: ResponseDto) => {
           if (res.isSuccess) {
+            localStorage.setItem('managerId', res.data.id);
             this.router.navigate(['/manager']);
           } else {
             this.messageLogin = 'Incorrect password or email!';
@@ -58,9 +60,8 @@ export class LoginPageComponent {
           this.getForm.password.value || ''
         )
         .subscribe((res: ResponseDto) => {
-          console.log(res);
-          
           if (res.isSuccess) {
+            localStorage.setItem('adminId', res.data.id);
             this.router.navigate(['/admin']);
           } else {
             this.messageLogin = 'Incorrect password or email!';
@@ -74,6 +75,7 @@ export class LoginPageComponent {
         )
         .subscribe((res: ResponseDto) => {
           if (res.isSuccess) {
+            localStorage.setItem('staffId', res.data.id);
             this.router.navigate(['/staff']);
           } else {
             this.messageLogin = 'Incorrect password or email!';
@@ -87,6 +89,7 @@ export class LoginPageComponent {
         )
         .subscribe((res: ResponseDto) => {
           if (res.isSuccess) {
+            localStorage.setItem('teacherId', res.data.id);
             this.router.navigate(['/teacher']);
           } else {
             this.messageLogin = 'Incorrect password or email!';
@@ -100,6 +103,7 @@ export class LoginPageComponent {
         )
         .subscribe((res: ResponseDto) => {
           if (res.isSuccess) {
+            localStorage.setItem('parentId', res.data.id);
             this.router.navigate(['/parent']);
           } else {
             this.messageLogin = 'Incorrect password or email!';

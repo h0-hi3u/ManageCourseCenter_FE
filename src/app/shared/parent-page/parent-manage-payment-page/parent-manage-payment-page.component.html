@@ -36,42 +36,18 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>A Name</td>
+            <tr *ngFor="let payment of listPayment">
+                <td>name</td>
                 <td>2024-03-08 15:30:00</td>
-                <td>Banking</td>
-                <td>Paid</td>
+                <td>{{payment.method}}</td>
+                <td *ngIf="payment.status == 1">Processing</td>
+                <td *ngIf="payment.status == 2">Success</td>
+                <td *ngIf="payment.status == 3">Fail</td>
                 <td>
                     <a href="#">Detail</a>
                 </td>
             </tr>
-            <tr>
-                <td>A Name</td>
-                <td>2024-03-08 15:30:00</td>
-                <td>Banking</td>
-                <td>Paid</td>
-                <td>
-                    <a href="#">Detail</a>
-                </td>
-            </tr>
-            <tr>
-                <td>A Name</td>
-                <td>2024-03-08 15:30:00</td>
-                <td>Banking</td>
-                <td>Paid</td>
-                <td>
-                    <a href="#">Detail</a>
-                </td>
-            </tr>
-            <tr>
-                <td>A Name</td>
-                <td>2024-03-08 15:30:00</td>
-                <td>Banking</td>
-                <td>Paid</td>
-                <td>
-                    <a href="#">Detail</a>
-                </td>
-            </tr>
+            <!--  -->
             <tr>
                 <td>A Name</td>
                 <td>2024-03-08 15:30:00</td>

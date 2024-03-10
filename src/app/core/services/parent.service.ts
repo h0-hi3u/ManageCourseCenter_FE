@@ -9,12 +9,19 @@ import { environment } from 'src/environment/environment';
     providedIn: 'root'
 })
 export class ParentService {
-    private readonly urlCreateParent = 'Parent/create-parent'
+    private readonly urlCreateParent = 'Parent/create-parent';
+    private readonly urlGetChildren = 'Parent/get-child-parentId';
+
     constructor(private http: HttpClient) {}
     
     public createParent(parentCreateDto: ParentCreateDto) : Observable<ResponseDto> {
         return this.http.post<ResponseDto>(
             `${environment.urlApi}/${this.urlCreateParent}`, parentCreateDto
+        )
+    }
+    public getChildrenByParenId(parentId: string) : Observable<ResponseDto> {
+        return this.http.get<ResponseDto>(
+            `${environment.urlApi}/${this.urlGetChildren}?id=${parentId}`
         )
     }
 }

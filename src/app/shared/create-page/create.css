@@ -1,0 +1,172 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 40%;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    font-weight: bold;
+    width: 15%;
+    padding: 10px;
+    margin-left: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.btnClose {
+    display: inline-block;
+    padding: 10px;
+    margin-left: 10px;
+    background-color: #fff;
+    color: #007bff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btnClose:hover {
+    background-color: #fff;
+    color: #0056b3;
+}
+
+
+.rating-stars {
+    display: flex;
+    margin-left: 20px;
+}
+
+.rating-stars input[type="radio"] {
+    display: none;
+}
+
+.rating-stars label {
+    font-size: 30px;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.3s;
+    margin-right: 5px;
+}
+
+.rating-stars input[type="radio"]:checked~label {
+    color: #f39c12;
+}
+
+.rating-stars input[name="rating_course"]:checked~label {
+    color: #f39c12;
+}
+
+.rating-stars input[name="rating_teacher"]:checked~label {
+    color: #f39c12;
+}
+
+.rating-stars input[name="rating_equipment"]:checked~label {
+    color: #f39c12;
+}
+
+
+.profile-container {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+#profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    object-fit: cover;
+    cursor: pointer;
+    position: relative;
+}
+
+#profile-image-upload {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#course-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+    border: 2px solid #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    object-fit: cover;
+    cursor: pointer;
+    position: relative;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    margin-left: 5%;
+}
+
+.checkbox-group input[type="checkbox"] {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.checkbox-group section {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: end;
+}

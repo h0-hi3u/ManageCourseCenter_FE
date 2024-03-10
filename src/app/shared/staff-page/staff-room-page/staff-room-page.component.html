@@ -35,21 +35,22 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>A001</td>
-                <td>1</td>
+            <tr *ngFor="let room of listRoom">
+                <td>{{room.roomNo}}</td>
+                <td>{{room.floor}}</td>
                 <td>
                     <select class="form-control dropdown-custom">
-                        <option value="free">Free</option>
-                        <option value="using">Using</option>
-                        <option value="maintaining">Maintaining</option>
+                        <option value="free" [selected]="room.status == 1">Free</option>
+                        <option value="using" [selected]="room.status == 2">Using</option>
+                        <option value="maintaining" [selected]="room.status == 3" >Maintaining</option>
                     </select>
                 </td>
                 <td>
-                    <a href="#">Detail</a>
-                    <a href="#">Update</a>
+                    <a href="#" style="padding-right: 10px;">Detail</a>
+                    <a href="#" style="padding-left: 10px; border-left: 1px black solid;">Update</a>
                 </td>
             </tr>
+            <!--  -->
             <tr>
                 <td>A001</td>
                 <td>1</td>
@@ -61,53 +62,8 @@
                     </select>
                 </td>
                 <td>
-                    <a href="#">Detail</a>
-                    <a href="#">Update</a>
-                </td>
-            </tr>
-            <tr>
-                <td>A001</td>
-                <td>1</td>
-                <td>
-                    <select class="form-control dropdown-custom">
-                        <option value="free">Free</option>
-                        <option value="using">Using</option>
-                        <option value="maintaining">Maintaining</option>
-                    </select>
-                </td>
-                <td>
-                    <a href="#">Detail</a>
-                    <a href="#">Update</a>
-                </td>
-            </tr>
-            <tr>
-                <td>A001</td>
-                <td>1</td>
-                <td>
-                    <select class="form-control dropdown-custom">
-                        <option value="free">Free</option>
-                        <option value="using">Using</option>
-                        <option value="maintaining">Maintaining</option>
-                    </select>
-                </td>
-                <td>
-                    <a href="#">Detail</a>
-                    <a href="#">Update</a>
-                </td>
-            </tr>
-            <tr>
-                <td>A001</td>
-                <td>1</td>
-                <td>
-                    <select class="form-control dropdown-custom">
-                        <option value="free">Free</option>
-                        <option value="using">Using</option>
-                        <option value="maintaining">Maintaining</option>
-                    </select>
-                </td>
-                <td>
-                    <a href="#">Detail</a>
-                    <a href="#">Update</a>
+                    <a href="#" style="padding-right: 10px;">Detail</a>
+                    <a href="#" style="padding-left: 10px; border-left: 1px black solid;">Update</a>
                 </td>
             </tr>
         </tbody>

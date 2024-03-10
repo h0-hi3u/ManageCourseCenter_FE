@@ -41,50 +41,20 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>A001</td>
-                <td>E Name</td>
+            <tr *ngFor="let report of listReport">
+                <td>{{report.roomId}}</td>
+                <td>{{report.equipment.name}}</td>
                 <td>Role</td>
-                <td>2024-03-06 15:42:18</td>
-                <td>2024-03-06 16:42:18</td>
-                <td>Open</td>
+                <td>{{report.equipment.equipmentActivities[0].operateTime}}</td>
+                <td>{{report.equipment.equipmentActivities[0].finishedTime}}</td>
+                <td *ngIf="report.status == 1">Open</td>
+                <td *ngIf="report.status == 2">Close</td>
+                <td *ngIf="report.status == 3">Delete</td>
                 <td>
                     <a href="#">Detail</a>
                 </td>
             </tr>
-            <tr>
-                <td>A001</td>
-                <td>E Name</td>
-                <td>Role</td>
-                <td>2024-03-06 15:42:18</td>
-                <td>2024-03-06 16:42:18</td>
-                <td>Open</td>
-                <td>
-                    <a href="#">Detail</a>
-                </td>
-            </tr>
-            <tr>
-                <td>A001</td>
-                <td>E Name</td>
-                <td>Role</td>
-                <td>2024-03-06 15:42:18</td>
-                <td>2024-03-06 16:42:18</td>
-                <td>Open</td>
-                <td>
-                    <a href="#">Detail</a>
-                </td>
-            </tr>
-            <tr>
-                <td>A001</td>
-                <td>E Name</td>
-                <td>Role</td>
-                <td>2024-03-06 15:42:18</td>
-                <td>2024-03-06 16:42:18</td>
-                <td>Open</td>
-                <td>
-                    <a href="#">Detail</a>
-                </td>
-            </tr>
+            <!--  -->
             <tr>
                 <td>A001</td>
                 <td>E Name</td>

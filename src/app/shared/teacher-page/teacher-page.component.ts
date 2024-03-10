@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-teacher-page',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./teacher-page.component.css']
 })
 export class TeacherPageComponent {
+  constructor(private router: Router) {}
 
-}
+  public logout() {
+    localStorage.removeItem('teacherId');
+    localStorage.removeItem('access_token');
+    this.router.navigate([]);
+  }
+} 

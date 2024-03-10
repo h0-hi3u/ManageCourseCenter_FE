@@ -8,6 +8,7 @@ export interface EquipmentActivity {
     equipmentId: number;
     roomId: number;
     operateTime: Date;
+    finishedTime: Date;
     description: string;
     action: number;
 

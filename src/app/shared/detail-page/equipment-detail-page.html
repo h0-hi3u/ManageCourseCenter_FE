@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipment Detail</title>
+    <link rel="stylesheet" href="detail.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Equipment Detail</h1>
+        <form method="post">
+            <div class="form-group">
+                <label for="name">Euipment Name</label>
+                <input type="text" id="name" name="name" placeholder="Euipment Name" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <input type="text" id="description" name="description" placeholder="Description">
+            </div>
+            <div class="form-group">
+                <label for="type">Type</label>
+                <select name="type" id="type" required>
+                    <option value="furniture">Furniture</option>
+                    <option value="presentation">Presentation</option>
+                    <option value="pcb">PCB</option>
+                </select>
+            </div>
+        </form>
+        <div class="add-new-container">
+            <div class="header"> Equipment's Activity Log</div>
+        </div>
+        <div class="search-filter-container">
+            <div class="search-container">
+                <input type="text" placeholder="Search...">
+                <button class="search-button">Search</button>
+            </div>
+        </div>
+        <table class="activity-table">
+            <thead>
+                <tr>
+                    <th>Manager Name</th>
+                    <th>Equipment Name</th>
+                    <th>Room No</th>
+                    <th>Operate Time</th>
+                    <th>Activity</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>M Name</td>
+                    <td>E Name</td>
+                    <td>111</td>
+                    <td>2024-03-06 14:30:00</td>
+                    <td>Move</td>
+                    <td>
+                        <a href="#">Detail</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>M Name</td>
+                    <td>E Name</td>
+                    <td>111</td>
+                    <td>2024-03-06 14:30:00</td>
+                    <td>Move</td>
+                    <td>
+                        <a href="#">Detail</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>M Name</td>
+                    <td>E Name</td>
+                    <td>111</td>
+                    <td>2024-03-06 14:30:00</td>
+                    <td>Move</td>
+                    <td>
+                        <a href="#">Detail</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>M Name</td>
+                    <td>E Name</td>
+                    <td>111</td>
+                    <td>2024-03-06 14:30:00</td>
+                    <td>Move</td>
+                    <td>
+                        <a href="#">Detail</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>M Name</td>
+                    <td>E Name</td>
+                    <td>111</td>
+                    <td>2024-03-06 14:30:00</td>
+                    <td>Move</td>
+                    <td>
+                        <a href="#">Detail</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="btn-container">
+            <a href="#" class="btnClose">Close</a>
+            <button type="submit">Update</button>
+        </div>
+    </div>
+</body>
+
+</html>

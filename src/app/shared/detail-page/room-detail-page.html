@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Detail</title>
+    <link rel="stylesheet" href="detail.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Room Detail</h1>
+        <form method="post">
+            <div class="form-group">
+                <label for="roomno">Room No</label>
+                <input type="text" id="roomno" name="roomno" placeholder="Room No" required>
+            </div>
+            <div class="form-group">
+                <label for="floor">Floor</label>
+                <input type="number" id="floor" name="floor" class="date-input" placeholder="Floor" required>
+            </div>
+            <div class="form-group">
+                <label for="status">Status</label>
+                <select name="status" id="status" required>
+                    <option value="free">Free</option>
+                    <option value="using">Using</option>
+                    <option value="maintaining">Maintaining</option>
+                </select>
+            </div>
+        </form>
+        <div class="add-new-container">
+            <div class="header">Room's Equipment List</div>
+        </div>
+        <div class="search-filter-container">
+            <div class="search-container">
+                <input type="text" placeholder="Search...">
+                <button class="search-button">Search</button>
+            </div>
+        </div>
+
+        <table class="equipment-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>E name</td>
+                    <td>Type</td>
+                    <td>
+                        <a href="#">Detail</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>E name</td>
+                    <td>Type</td>
+                    <td>
+                        <a href="#">Detail</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>E name</td>
+                    <td>Type</td>
+                    <td>
+                        <a href="#">Detail</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>E name</td>
+                    <td>Type</td>
+                    <td>
+                        <a href="#">Detail</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>E name</td>
+                    <td>Type</td>
+                    <td>
+                        <a href="#">Detail</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="btn-container">
+            <a href="#" class="btnClose">Close</a>
+            <button type="submit">Update</button>
+        </div>
+    </div>
+</body>
+
+</html>

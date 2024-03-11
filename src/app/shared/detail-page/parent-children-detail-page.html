@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Children</title>
-    <link rel="stylesheet" href="create.css">
+    <title>Children Detail</title>
+    <link rel="stylesheet" href="detail.css">
 </head>
 
 <body>
     <div class="container">
-        <h1>Create Children</h1>
+        <h1>Children Detail</h1>
         <div class="profile-container">
             <img id="profile-picture" src="logo.jpg" alt="Profile Picture">
             <input type="file" id="profile-image-upload" accept="image/*" required>
@@ -18,12 +18,19 @@
         <form method="post">
             <div class="form-group">
                 <label for="fullname">Full Name</label>
-                <input type="text" id="fullname" name="fullname" placeholder="Full Name" required>
+                <input type="text" id="fullname" name="fullname" value="Full Name" required>
+            </div>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" value="Username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="text" id="password" name="password" value="password" required>
             </div>
             <div class="form-group">
                 <label for="birth">Birth Day</label>
-                <input type="date" id="birth" name="birth" class="date-input" placeholder="dd/mm/yyyy"
-                    autocomplete="off" required>
+                <input type="date" id="birth" name="birth" class="date-input" value="dd/mm/yyyy" required>
             </div>
             <div class="form-group">
                 <label for="gender">Gender</label>
@@ -33,9 +40,16 @@
                     <option value="other">Other</option>
                 </select>
             </div>
+            <div class="form-group">
+                <label for="status">Status</label>
+                <select name="status" id="status" required>
+                    <option value="active">Active</option>
+                    <option value="suspend">Inactive</option>
+                </select>
+            </div>
             <div class="btn-container">
                 <a href="#" class="btnClose">Close</a>
-                <button type="submit">Add</button>
+                <button type="submit">Update</button>
             </div>
         </form>
     </div>

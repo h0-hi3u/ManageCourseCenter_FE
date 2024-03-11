@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Detail</title>
+    <link rel="stylesheet" href="detail.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Feedback Detail</h1>
+        <form method="post">
+            <div class="form-group">
+                <label for="coursename">Course Name</label>
+                <input type="text" id="coursename" name="coursename" value="Course Name" readonly>
+            </div>
+            <div class="form-group">
+                <label for="teachername">Teacher Name</label>
+                <input type="text" id="teachername" name="teachername" value="Teacher Name" readonly>
+            </div>
+            <div class="form-feedback">
+                <label for="courserating">Course Rating:</label>
+                <input type="number" id="courserating" name="courserating" value="5" readonly>
+            </div>
+            <div class="form-feedback">
+                <label for="teachertrating">Teacher Rating:</label>
+                <input type="number" id="teachertrating" name="teachertrating" value="5" readonly>
+            </div>
+            <div class="form-feedback">
+                <label for="equipmentrating">Equipment Rating:</label>
+                <input type="number" id="equipmentrating" name="equipmentrating" value="5" readonly>
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <input type="text" id="description" name="description" value="Description" readonly>
+            </div>
+            <div class="btn-container">
+                <a href="#" class="btnClose">Close</a>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

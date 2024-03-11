@@ -421,3 +421,21 @@ tr:hover {
 .equipment-table td:nth-child(2) {
     width: 30%;
 }
+
+.course-table th:last-child,
+.course-table td:last-child,
+.course-table th:nth-child(4),
+.course-table td:nth-child(4),
+.course-table th:nth-child(5),
+.course-table td:nth-child(5) {
+    width: 10%;
+}
+
+.course-table th:first-child,
+.course-table td:first-child,
+.course-table th:nth-child(2),
+.course-table td:nth-child(2),
+.course-table th:nth-child(3),
+.course-table td:nth-child(3) {
+    width: 20%;
+}

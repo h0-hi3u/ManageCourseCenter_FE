@@ -4,8 +4,8 @@ export interface ClassTime {
     id: number;
     classId: number;
     dayInWeek: string;
-    startTime: Date;
-    endTime: Date;
+    startTime: string;
+    endTime: string;
 
     class: Class;
 }

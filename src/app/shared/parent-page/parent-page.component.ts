@@ -11,6 +11,6 @@ export class ParentPageComponent {
   public logout() {
     localStorage.removeItem('parentId');
     localStorage.removeItem('access_token');
-    this.router.navigate([]);
+    this.router.navigate(['']);
   }
 }

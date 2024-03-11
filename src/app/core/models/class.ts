@@ -9,6 +9,8 @@ export interface Class {
     courseId: number;
     teacherId: number;
     name: string;
+    startDate: Date;
+    endDate: Date;
     totalAmount: number;
     status: number;
 

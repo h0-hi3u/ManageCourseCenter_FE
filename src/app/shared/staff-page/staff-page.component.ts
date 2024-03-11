@@ -11,6 +11,6 @@ export class StaffPageComponent {
   public logout() {
     localStorage.removeItem('staffId');
     localStorage.removeItem('access_token');
-    this.router.navigate([]);
+    this.router.navigate(['']);
   }
 }

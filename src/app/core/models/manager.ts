@@ -5,6 +5,7 @@ export interface Manager {
     fullName: string;
     email: string;
     password: string;
+    imageUrl: string;
     phone: string;
     birthDay: Date;
     gender: number;

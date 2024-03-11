@@ -9,8 +9,6 @@ import { Router } from '@angular/router';
 export class ParentPageComponent {
   constructor(private router: Router) {}
   public logout() {
-    console.log('logout');
-    
     localStorage.removeItem('parentId');
     localStorage.removeItem('access_token');
     this.router.navigate(['']);

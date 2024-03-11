@@ -12,6 +12,6 @@ export class TeacherPageComponent {
   public logout() {
     localStorage.removeItem('teacherId');
     localStorage.removeItem('access_token');
-    this.router.navigate([]);
+    this.router.navigate(['']);
   }
 } 

@@ -11,6 +11,7 @@ import { environment } from 'src/environment/environment';
 export class ParentService {
     private readonly urlCreateParent = 'Parent/create-parent';
     private readonly urlGetChildren = 'Parent/get-child-parentId';
+    private readonly urlGetAll = 'Parent/get-all-parent';
 
     constructor(private http: HttpClient) {}
     
@@ -22,6 +23,11 @@ export class ParentService {
     public getChildrenByParenId(parentId: string) : Observable<ResponseDto> {
         return this.http.get<ResponseDto>(
             `${environment.urlApi}/${this.urlGetChildren}?id=${parentId}`
+        )
+    }
+    public getAll() : Observable<ResponseDto> {
+        return this.http.get<ResponseDto>(
+            `${environment.urlApi}/${this.urlGetAll}`
         )
     }
 }

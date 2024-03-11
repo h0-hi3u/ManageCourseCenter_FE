@@ -1,0 +1,40 @@
+<div class="container">
+    <h1>Teacher Detail</h1>
+    <div class="profile-container">
+        <img id="profile-picture" src="{{teacher.imgUrl}}" alt="Profile Picture">
+    </div>
+    <form method="post">
+        <div class="form-group">
+            <label for="fullname">Full Name</label>
+            <input type="text" id="username" name="username" value="Full Name" readonly value="{{teacher.fullName}}">
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" value="Email" readonly value="{{teacher.email}}">
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" value="Phone" readonly value="{{teacher.phone}}">
+        </div>
+        <div class="form-group">
+            <label for="birth">Birth Day</label>
+            <input type="text" id="birth" name="birth" class="date-input" autocomplete="off"
+                readonly value="{{helperDate.formatDateYearMonthDayDate(teacher.birthDay)}}">
+        </div>
+        <div class="form-group">
+            <label for="gender">Gender</label>
+            <input type="text" id="gender" name="gender" value="Gender" readonly>
+        </div>
+        <div class="form-group">
+            <label for="status">Status</label>
+            <select name="status" id="status" required>
+                <option value="active">Active</option>
+                <option value="inactive">Inactive</option>
+            </select>
+        </div>
+        <div class="btn-container">
+            <a href="/manager/teacher" class="btnClose">Close</a>
+            <button type="submit">Update</button>
+        </div>
+    </form>
+</div>

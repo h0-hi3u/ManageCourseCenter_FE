@@ -1,0 +1,48 @@
+<div class="container">
+    <h1>Staff Detail</h1>
+    <div class="profile-container">
+        <img id="profile-picture" src="{{staff.imageUrl}}" alt="Profile Picture">
+    </div>
+    <form method="post">
+        <div class="form-group">
+            <label for="fullname">Name</label>
+            <input type="text" id="username" name="username" value="Full Name" readonly value="{{staff.fullName}}">
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" value="Email" readonly value="{{staff.email}}">
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" value="Phone" readonly value="{{staff.phone}}">
+        </div>
+        <div class="form-group">
+            <label for="birth">Birthday</label>
+            <input type="text" id="birth" name="birth" class="date-input" autocomplete="off"
+                readonly value="{{helperDate.formatDateYearMonthDayDate(staff.birthDay)}}">
+        </div>
+        <div class="form-group">
+            <label *ngIf="staff.gender == 1" for="gender">Male</label>
+            <label *ngIf="staff.gender == 2" for="gender">Female</label>
+            <input type="text" id="gender" name="gender" value="Gender" readonly>
+        </div>
+        <div class="form-group">
+            <label for="role">Role</label>
+            <select name="role" id="role" required>
+                <option value="staff" [selected]="staff.role == 3">Staff</option>
+                <option value="manager" [selected]="staff.role == 1">Manager</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="status">Status</label>
+            <select name="status" id="status" required>
+                <option [selected]="staff.status == 1" value="active">Active</option>
+                <option [selected]="staff.status == 2" value="inactive">Inactive</option>
+            </select>
+        </div>
+        <div class="btn-container">
+            <a href="/manager/staff" class="btnClose">Close</a>
+            <button type="submit">Update</button>
+        </div>
+    </form>
+</div>

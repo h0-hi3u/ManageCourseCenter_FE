@@ -47,6 +47,16 @@ import { ManageFeedbackPageComponent } from './shared/manage-page/manage-feedbac
 import { ChildrenCreateFeedbackPageComponent } from './shared/children-page/children-create-feedback-page/children-create-feedback-page.component';
 import { ParentCreateChildrenPageComponent } from './shared/parent-page/parent-create-children-page/parent-create-children-page.component';
 import { TeacherCreateReportPageComponent } from './shared/teacher-page/teacher-create-report-page/teacher-create-report-page.component';
+import { ManageCreateActivityPageComponent } from './shared/manage-page/manage-create-activity-page/manage-create-activity-page.component';
+import { ManageCreateClassPageComponent } from './shared/manage-page/manage-create-class-page/manage-create-class-page.component';
+import { ManageCreateEquipmentPageComponent } from './shared/manage-page/manage-create-equipment-page/manage-create-equipment-page.component';
+import { ManageCreateRoomPageComponent } from './shared/manage-page/manage-create-room-page/manage-create-room-page.component';
+import { ManageCoursePageComponent } from './shared/manage-page/manage-course-page/manage-course-page.component';
+import { ManageChildrenPageComponent } from './shared/manage-page/manage-children-page/manage-children-page.component';
+import { ManageCreateCoursePageComponent } from './shared/manage-page/manage-create-course-page/manage-create-course-page.component';
+import { ManageStaffDetailPageComponent } from './shared/manage-page/manage-staff-detail-page/manage-staff-detail-page.component';
+import { ManageTeacherDetailPageComponent } from './shared/manage-page/manage-teacher-detail-page/manage-teacher-detail-page.component';
+import { DatePipe } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -92,6 +102,15 @@ import { TeacherCreateReportPageComponent } from './shared/teacher-page/teacher-
     ChildrenCreateFeedbackPageComponent,
     ParentCreateChildrenPageComponent,
     TeacherCreateReportPageComponent,
+    ManageCreateActivityPageComponent,
+    ManageCreateClassPageComponent,
+    ManageCreateEquipmentPageComponent,
+    ManageCreateRoomPageComponent,
+    ManageCoursePageComponent,
+    ManageChildrenPageComponent,
+    ManageCreateCoursePageComponent,
+    ManageStaffDetailPageComponent,
+    ManageTeacherDetailPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -100,7 +119,9 @@ import { TeacherCreateReportPageComponent } from './shared/teacher-page/teacher-
     FontAwesomeModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    DatePipe
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

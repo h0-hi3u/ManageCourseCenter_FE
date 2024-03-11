@@ -7,7 +7,7 @@ export interface Teacher {
     fullName: string;
     email: string;
     password: string;
-    imageUrl: string;
+    imgUrl: string;
     phone: string;
     birthDay: Date;
     gender: number;

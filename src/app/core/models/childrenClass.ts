@@ -1,6 +1,6 @@
-import { Child } from "./child";
+import { Children } from "./children";
 import { Class } from "./class";
-import { Feedback } from "./feedback";
+import { Feedback } from "./feedbackDto/feedback";
 import { Schedule } from "./schedule";
 
 export interface ChildrenClass {
@@ -8,7 +8,7 @@ export interface ChildrenClass {
     classId: number;
     childrenId: number;
 
-    children: Child;
+    children: Children;
     class: Class;
     feedbacks: Feedback[];
     schedules: Schedule[];

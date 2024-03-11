@@ -1,8 +1,9 @@
 import { Equipment } from "./equipment";
-import { Room } from "./room";
+import { Room } from "../room";
 
 export interface EquipmentReport {
     id: number;
+    senderId: number
     roomId: number;
     equipmentId: number;
     description: string;

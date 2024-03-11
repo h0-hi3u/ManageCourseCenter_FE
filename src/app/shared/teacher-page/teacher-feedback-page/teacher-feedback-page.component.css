@@ -206,7 +206,7 @@ tr:hover {
 .children-feedback-table td:first-child,
 .children-feedback-table th:nth-child(2),
 .children-feedback-table td:nth-child(2) {
-    width: 22.5%;
+    width: 12.5%;
 }
 
 
@@ -221,7 +221,7 @@ tr:hover {
 
 .children-feedback-table th:last-child,
 .children-feedback-table td:last-child {
-    width: 10%;
+    width: 30%;
 }
 
 .feedback-table th:first-child,

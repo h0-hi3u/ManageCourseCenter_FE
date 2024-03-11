@@ -29,58 +29,18 @@
                 <th>Course Rating</th>
                 <th>Teacher Rating</th>
                 <th>Equipment Rating</th>
-                <th>Action</th>
+                <th>Description</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>C Name</td>
-                <td>A001</td>
-                <td>5</td>
-                <td>4</td>
-                <td>3</td>
+            <tr *ngFor="let feedback of listFeedback">
+                <td>{{feedback.childrenClass.class.course.name}}</td>
+                <td>{{feedback.childrenClass.class.name}}</td>
+                <td>{{feedback.courseRating}}</td>
+                <td>{{feedback.teacherRating}}</td>
+                <td>{{feedback.equipmentRating}}</td>
                 <td>
-                    <a href="#">Detail</a>
-                </td>
-            </tr>
-            <tr>
-                <td>C Name</td>
-                <td>A001</td>
-                <td>5</td>
-                <td>4</td>
-                <td>3</td>
-                <td>
-                    <a href="#">Detail</a>
-                </td>
-            </tr>
-            <tr>
-                <td>C Name</td>
-                <td>A001</td>
-                <td>5</td>
-                <td>4</td>
-                <td>3</td>
-                <td>
-                    <a href="#">Detail</a>
-                </td>
-            </tr>
-            <tr>
-                <td>C Name</td>
-                <td>A001</td>
-                <td>5</td>
-                <td>4</td>
-                <td>3</td>
-                <td>
-                    <a href="#">Detail</a>
-                </td>
-            </tr>
-            <tr>
-                <td>C Name</td>
-                <td>A001</td>
-                <td>5</td>
-                <td>4</td>
-                <td>3</td>
-                <td>
-                    <a href="#">Detail</a>
+                    {{feedback.description}}
                 </td>
             </tr>
         </tbody>

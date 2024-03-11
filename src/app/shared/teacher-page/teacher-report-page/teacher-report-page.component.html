@@ -2,7 +2,7 @@
     <div class="add-new-container">
         <div class="header">Equipment Report List</div>
         <section>
-            <button class="add-button">Add New</button>
+            <button (click)="goToCreateReport()" class="add-button">Add New</button>
         </section>
     </div>
     <div class="search-filter-container">
@@ -41,57 +41,16 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>A001</td>
-                <td>E Name</td>
+            <tr *ngFor="let report of listReport">
+                <td>{{report.room.roomNo}}</td>
+                <td>{{report.equipment.name}}</td>
                 <td>Role</td>
-                <td>2024-03-06 15:42:18</td>
-                <td>2024-03-06 16:42:18</td>
-                <td>Open</td>
-                <td>
-                    <a href="#">Detail</a>
-                </td>
-            </tr>
-            <tr>
-                <td>A001</td>
-                <td>E Name</td>
-                <td>Role</td>
-                <td>2024-03-06 15:42:18</td>
-                <td>2024-03-06 16:42:18</td>
-                <td>Open</td>
-                <td>
-                    <a href="#">Detail</a>
-                </td>
-            </tr>
-            <tr>
-                <td>A001</td>
-                <td>E Name</td>
-                <td>Role</td>
-                <td>2024-03-06 15:42:18</td>
-                <td>2024-03-06 16:42:18</td>
-                <td>Open</td>
-                <td>
-                    <a href="#">Detail</a>
-                </td>
-            </tr>
-            <tr>
-                <td>A001</td>
-                <td>E Name</td>
-                <td>Role</td>
-                <td>2024-03-06 15:42:18</td>
-                <td>2024-03-06 16:42:18</td>
-                <td>Open</td>
-                <td>
-                    <a href="#">Detail</a>
-                </td>
-            </tr>
-            <tr>
-                <td>A001</td>
-                <td>E Name</td>
-                <td>Role</td>
-                <td>2024-03-06 15:42:18</td>
-                <td>2024-03-06 16:42:18</td>
-                <td>Open</td>
+                <td>{{helperDate.formatDateYearMonthDayDate(report.sendTime)}}</td>
+                <td *ngIf="report.closeTime">{{helperDate.formatDateYearMonthDayDate(report.closeTime)}}</td>
+                <td *ngIf="!report.closeTime">Maintaining</td>
+                <td *ngIf="report.status == 1">Opening</td>
+                <td *ngIf="report.status == 2">Closed</td>
+                <td *ngIf="report.status == 3">Deleted</td>
                 <td>
                     <a href="#">Detail</a>
                 </td>

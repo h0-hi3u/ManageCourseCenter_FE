@@ -1,4 +1,4 @@
-import { EquipmentActivity } from "./equipmentActivity";
+import { EquipmentActivity } from "./equipmentDto/equipmentActivity";
 
 export interface Manager {
     id: number;

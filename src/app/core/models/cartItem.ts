@@ -1,5 +1,5 @@
 import { Cart } from "./cart";
-import { Child } from "./child";
+import { Children } from "./children";
 import { Class } from "./class";
 import { Course } from "./coures";
 
@@ -11,7 +11,7 @@ export interface CartItem {
     childrenId: number;
 
     cart: Cart;
-    child: Child;
+    child: Children;
     class: Class;
     course: Course;
 }

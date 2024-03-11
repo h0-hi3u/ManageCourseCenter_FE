@@ -1,4 +1,4 @@
-import { EquipmentReport } from 'src/app/core/models/equipmentReport';
+import { EquipmentReport } from 'src/app/core/models/equipmentDto/equipmentReport';
 import { EquipmentReportService } from './../../../core/services/equipmentReport.service';
 import { Component, OnInit } from '@angular/core';
 import { ResponseDto } from 'src/app/core/models/reponseDto';

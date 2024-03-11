@@ -1,4 +1,4 @@
-import { Child } from "./child";
+import { Children } from "./children";
 import { Course } from "./coures";
 import { Teacher } from "./teacher";
 
@@ -14,7 +14,7 @@ export interface AcademicTranscript {
     average: number;
     status: number;
 
-    children: Child;
+    children: Children;
     course: Course;
     teacher:Teacher;
 }

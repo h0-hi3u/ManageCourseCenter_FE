@@ -1,32 +1,28 @@
 <div class="container">
     <h1>Equipment Report</h1>
-    <form method="post">
+    <span style="color: red;" *ngIf="messageCreate != ''">{{messageCreate}}</span>
+    <form [formGroup]="createReportFrom" (ngSubmit)="submit()">
         <div class="form-group">
             <label for="roomno">Room No</label>
-            <input list="roomsno" id="roomno" name="roomno" placeholder="Type or select room no" required>
-            <datalist id="roomsno">
-                <option value="Room1">
-                <option value="Room2">
-                <option value="...">
-            </datalist>
+            <select formControlName="roomId" (change)="getEquipment($event.target)">
+                <option selected hidden value="">Room No</option>
+                <option *ngFor="let room of listRoom" value="{{room.id}}">{{room.roomNo}}</option>
+            </select>
         </div>
         <div class="form-group">
-            <label for="equipmentname">Equipment Name</label>
-            <input list="equipmentsname" id="equipmentname" name="equipmentname"
-                placeholder="Type or select equipment name" required>
-            <datalist id="equipmentsname">
-                <option value="Equipment1">
-                <option value="Equipment2">
-                <option value="...">
-            </datalist>
+            <label for="equipmentname">Equipment</label>
+            <select formControlName="equipmentId">
+                <option selected hidden value="">Equipment</option>
+                <option *ngFor="let equipment of listEquipment" value="{{equipment.id}}">{{equipment.name}}</option>
+            </select>
         </div>
         <div class="form-group">
             <label for="description">Description</label>
-            <input type="text" id="description" name="description" placeholder="Description">
+            <input type="text" id="description" name="description" placeholder="Description" formControlName="description">
         </div>
         <div class="btn-container">
-            <a href="#" class="btnClose">Close</a>
-            <button type="submit">Add</button>
+            <a href="/teacher/report" class="btnClose">Close</a>
+            <button type="submit" [disabled]="createReportFrom.invalid">Add</button>
         </div>
     </form>
 </div>

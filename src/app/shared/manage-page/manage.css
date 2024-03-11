@@ -169,10 +169,8 @@ tr:hover {
 
 .report-table th:first-child,
 .report-table td:first-child,
-.report-table th:nth-child(3),
-.report-table td:nth-child(3),
-.report-table th:nth-child(6),
-.report-table td:nth-child(6),
+.report-table th:nth-child(5),
+.report-table td:nth-child(5),
 .report-table th:last-child,
 .report-table td:last-child {
     width: 10%;
@@ -180,11 +178,11 @@ tr:hover {
 
 .report-table th:nth-child(2),
 .report-table td:nth-child(2),
+.report-table th:nth-child(3),
+.report-table td:nth-child(3),
 .report-table th:nth-child(4),
-.report-table td:nth-child(4),
-.report-table th:nth-child(5),
-.report-table td:nth-child(5) {
-    width: 20%;
+.report-table td:nth-child(4) {
+    width: 22%;
 }
 
 .children-class-table th:first-child,

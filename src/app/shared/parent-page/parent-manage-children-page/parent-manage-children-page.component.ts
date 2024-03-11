@@ -1,4 +1,4 @@
-import { Child } from 'src/app/core/models/child';
+import { Children } from 'src/app/core/models/children';
 import { ParentService } from './../../../core/services/parent.service';
 import { Component, OnInit } from '@angular/core';
 import { ResponseDto } from 'src/app/core/models/reponseDto';
@@ -10,7 +10,7 @@ import { ResponseDto } from 'src/app/core/models/reponseDto';
 })
 export class ParentManageChildrenPageComponent implements OnInit {
   parentId: string = '';
-  listChildren: Child[] = [];
+  listChildren: Children[] = [];
   constructor(private parentService: ParentService) {}
   ngOnInit(): void {
       this.parentId = localStorage.getItem('parentId') || '';

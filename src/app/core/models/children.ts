@@ -3,7 +3,7 @@ import { CartItem } from "./cartItem";
 import { ChildrenClass } from "./childrenClass";
 import { Parent } from "./parentDto/parent";
 
-export interface Child {
+export interface Children {
     id: number;
     parentId: number;
     fullName: string;

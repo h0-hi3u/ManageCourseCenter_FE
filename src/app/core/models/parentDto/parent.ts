@@ -1,5 +1,5 @@
 import { Cart } from "../cart";
-import { Child } from "../child";
+import { Children } from "../children";
 
 export interface Parent {
     id: number;
@@ -13,5 +13,5 @@ export interface Parent {
     status: number;
 
     carts: Cart[];
-    children: Child[];
+    children: Children[];
 }

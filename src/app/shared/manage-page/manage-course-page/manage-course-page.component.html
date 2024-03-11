@@ -42,59 +42,19 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>C Name</td>
-                <td>2024-03-10 14:00:00</td>
-                <td>2024-03-20 14:00:00</td>
-                <td>500.000</td>
+            <tr *ngFor="let course of listCourse">
+                <td>{{course.name}}</td>
+                <td>{{helperDate.formatDateYearMonthDayDate(course.openFormTime)}}</td>
+                <td>{{helperDate.formatDateYearMonthDayDate(course.closeFormTime)}}</td>
+                <td>${{course.price}}</td>
                 <td>Beginner</td>
-                <td>Opening</td>
+                <td *ngIf="course.status == 1">Upcoming</td>
+                <td *ngIf="course.status == 2">Opening</td>
+                <td *ngIf="course.status == 3">Closes</td>
+                <td *ngIf="course.status == 4">Ongoing</td>
+                <td *ngIf="course.status == 5">Ended</td>
                 <td>
-                    <a href="#">Detail</a>
-                </td>
-            </tr>
-            <tr>
-                <td>C Name</td>
-                <td>2024-03-10 14:00:00</td>
-                <td>2024-03-20 14:00:00</td>
-                <td>500.000</td>
-                <td>Beginner</td>
-                <td>Opening</td>
-                <td>
-                    <a href="#">Detail</a>
-                </td>
-            </tr>
-            <tr>
-                <td>C Name</td>
-                <td>2024-03-10 14:00:00</td>
-                <td>2024-03-20 14:00:00</td>
-                <td>500.000</td>
-                <td>Beginner</td>
-                <td>Opening</td>
-                <td>
-                    <a href="#">Detail</a>
-                </td>
-            </tr>
-            <tr>
-                <td>C Name</td>
-                <td>2024-03-10 14:00:00</td>
-                <td>2024-03-20 14:00:00</td>
-                <td>500.000</td>
-                <td>Beginner</td>
-                <td>Opening</td>
-                <td>
-                    <a href="#">Detail</a>
-                </td>
-            </tr>
-            <tr>
-                <td>C Name</td>
-                <td>2024-03-10 14:00:00</td>
-                <td>2024-03-20 14:00:00</td>
-                <td>500.000</td>
-                <td>Beginner</td>
-                <td>Opening</td>
-                <td>
-                    <a href="#">Detail</a>
+                    <button (click)="goToCourseDetail(course.id)" style="padding-right: 10px; border: none; background-color: transparent; color: #1154b6;">Detail</button>
                 </td>
             </tr>
         </tbody>

@@ -6,6 +6,8 @@ export interface EquipmentReport {
     roomId: number;
     equipmentId: number;
     description: string;
+    sendTime: Date;
+    closeTime? : Date;
     status: number;
 
     equipment: Equipment;

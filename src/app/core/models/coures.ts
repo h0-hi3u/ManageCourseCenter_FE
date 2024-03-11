@@ -6,8 +6,6 @@ export interface Course {
     id: number;
     name: string;
     description: string;
-    startDate: Date;
-    endDate: Date;
     openFormTime: Date;
     closeFormTime: Date;
     price: number;

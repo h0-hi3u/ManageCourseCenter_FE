@@ -38,7 +38,7 @@
         <tbody>
             <tr *ngFor="let payment of listPayment">
                 <td>name</td>
-                <td>2024-03-08 15:30:00</td>
+                <td>{{payment.processTime}}</td>
                 <td>{{payment.method}}</td>
                 <td *ngIf="payment.status == 1">Processing</td>
                 <td *ngIf="payment.status == 2">Success</td>

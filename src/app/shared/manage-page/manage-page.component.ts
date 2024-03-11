@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-owner-page',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./manage-page.component.css']
 })
 export class ManagePageComponent {
+  constructor(private router: Router) {}
 
+  public logout() {
+    localStorage.removeItem('managerId');
+    localStorage.removeItem('access_token');
+    this.router.navigate(['']);
+  }
 }

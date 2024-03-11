@@ -1,0 +1,67 @@
+<div class="container">
+    <div class="add-new-container">
+        <div class="header">Children List</div>
+        <section>
+            <button class="add-button">Add New</button>
+        </section>
+    </div>
+    <div class="search-filter-container">
+        <div class="search-container">
+            <input type="text" placeholder="Search...">
+            <button class="search-button">Search</button>
+        </div>
+        <div class="filter-container">
+            <select>
+                <option value="name">Full Name</option>
+                <option value="username">Username</option>
+                <option value="birth">Birth Day</option>
+                <option value="gender">Gender</option>
+                <option value="status">Status</option>
+            </select>
+            <select>
+                <option value="all">Default</option>
+                <option value="active">Inscreasing</option>
+                <option value="inactive">Descreasing</option>
+            </select>
+            <button class="filter-button">Filter</button>
+        </div>
+    </div>
+
+    <table class="parent-children-table">
+        <thead>
+            <tr>
+                <th>Full Name</th>
+                <th>Birth Date</th>
+                <th>Gender</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- <tr *ngFor="let child of listChildren">
+                <td>{{child.fullName}}</td>
+                <td>{{child.username}}</td>
+                <td>{{child.password}}</td>
+                <td>{{child.birthDay}}</td>
+                <td *ngIf="child.gender == 1">Male</td>
+                <td *ngIf="child.gender == 2">Female</td>
+                <td *ngIf="child.status == 1">Active</td>
+                <td *ngIf="child.status == 2">Inactive</td>
+                <td>
+                    <a style="padding-right: 10px;" href="#">Detail</a>
+                    <a style="padding-left: 10px; border-left: 1px black solid; " href="#">Inactivate</a>
+                </td>
+            </tr> -->
+            <tr>
+                <td>name</td>
+                <td>12/23/123</td>
+                <td>Male</td>
+                <td>Inactive</td>
+                <td>
+                    <a style="padding-right: 10px;" href="#">Detail</a>
+                    <a style="padding-left: 10px; border-left: 1px black solid; " href="#">Inactivate</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

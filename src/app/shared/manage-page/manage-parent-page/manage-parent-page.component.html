@@ -40,64 +40,18 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>A Name</td>
-                <td>e@gamil.com</td>
-                <td>0123456789</td>
-                <td>2024-03-06</td>
-                <td>Gender</td>
-                <td>Active</td>
-                <td>
-                    <a href="#">Detail</a>
-                    <a href="#">Inactivate</a>
-                </td>
-            </tr>
-            <tr>
-                <td>A Name</td>
-                <td>e@gamil.com</td>
-                <td>0123456789</td>
-                <td>2024-03-06</td>
-                <td>Gender</td>
-                <td>Active</td>
-                <td>
-                    <a href="#">Detail</a>
-                    <a href="#">Inactivate</a>
-                </td>
-            </tr>
-            <tr>
-                <td>A Name</td>
-                <td>e@gamil.com</td>
-                <td>0123456789</td>
-                <td>2024-03-06</td>
-                <td>Gender</td>
-                <td>Active</td>
-                <td>
-                    <a href="#">Detail</a>
-                    <a href="#">Inactivate</a>
-                </td>
-            </tr>
-            <tr>
-                <td>A Name</td>
-                <td>e@gamil.com</td>
-                <td>0123456789</td>
-                <td>2024-03-06</td>
-                <td>Gender</td>
-                <td>Active</td>
-                <td>
-                    <a href="#">Detail</a>
-                    <a href="#">Inactivate</a>
-                </td>
-            </tr>
-            <tr>
-                <td>A Name</td>
-                <td>e@gamil.com</td>
-                <td>0123456789</td>
-                <td>2024-03-06</td>
-                <td>Gender</td>
-                <td>Active</td>
-                <td>
-                    <a href="#">Detail</a>
-                    <a href="#">Inactivate</a>
+            <tr *ngFor="let parent of listParent">
+                <td>{{parent.fullName}}</td>
+                <td>{{parent.email}}</td>
+                <td>{{parent.phone}}</td>
+                <td>{{helperDate.formatDateYearMonthDayDate(parent.birthDay)}}</td>
+                <td *ngIf="parent.gender == 1">Male</td>
+                <td *ngIf="parent.gender == 2">Female</td>
+                <td *ngIf="parent.status == 1">Active</td>
+                <td *ngIf="parent.status == 2">Inactive</td>
+                <td style="display: flex;">
+                    <button (click)="goToParentDetail(parent.id)" style="padding-right: 10px; border: none; background-color: transparent; color: #1154b6;">Detail</button>
+                    <a href="#" style="padding-left: 10px; border-left: 1px black solid;">Inactivate</a>
                 </td>
             </tr>
         </tbody>

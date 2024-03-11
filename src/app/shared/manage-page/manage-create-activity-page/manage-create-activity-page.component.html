@@ -1,0 +1,40 @@
+<div class="container">
+    <h1>Add New Equipment Activity</h1>
+    <form method="post">
+        <div class="form-group">
+            <label for="roomno">Room No</label>
+            <input list="roomsno" id="roomno" name="roomno" placeholder="Type or select room no" required>
+            <datalist id="roomsno">
+                <option value="Room1">
+                <option value="Room2">
+                <option value="...">
+            </datalist>
+        </div>
+        <div class="form-group">
+            <label for="equipmentname">Equipment Name</label>
+            <input list="equipmentsname" id="equipmentname" name="equipmentname"
+                placeholder="Type or select equipment name" required>
+            <datalist id="equipmentsname">
+                <option value="Equipment1">
+                <option value="Equipment2">
+                <option value="...">
+            </datalist>
+        </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <input type="text" id="description" name="description" placeholder="Description">
+        </div>
+        <div class="form-group">
+            <label for="action">Action</label>
+            <select name="action" id="action" required>
+                <option value="action1">Action 1</option>
+                <option value="action2">Action 2</option>
+                <option value="...">...</option>
+            </select>
+        </div>
+        <div class="btn-container">
+            <a href="#" class="btnClose">Close</a>
+            <button type="submit">Add</button>
+        </div>
+    </form>
+</div>

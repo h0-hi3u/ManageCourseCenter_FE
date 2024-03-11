@@ -40,6 +40,15 @@ import { ManageTeacherPageComponent } from './shared/manage-page/manage-teacher-
 import { ChildrenCreateFeedbackPageComponent } from './shared/children-page/children-create-feedback-page/children-create-feedback-page.component';
 import { ParentCreateChildrenPageComponent } from './shared/parent-page/parent-create-children-page/parent-create-children-page.component';
 import { TeacherCreateReportPageComponent } from './shared/teacher-page/teacher-create-report-page/teacher-create-report-page.component';
+import { ManageCreateClassPageComponent } from './shared/manage-page/manage-create-class-page/manage-create-class-page.component';
+import { ManageCreateEquipmentPageComponent } from './shared/manage-page/manage-create-equipment-page/manage-create-equipment-page.component';
+import { ManageCreateRoomPageComponent } from './shared/manage-page/manage-create-room-page/manage-create-room-page.component';
+import { ManageCreateActivityPageComponent } from './shared/manage-page/manage-create-activity-page/manage-create-activity-page.component';
+import { ManageCoursePageComponent } from './shared/manage-page/manage-course-page/manage-course-page.component';
+import { ManageCreateCoursePageComponent } from './shared/manage-page/manage-create-course-page/manage-create-course-page.component';
+import { ManageChildrenPageComponent } from './shared/manage-page/manage-children-page/manage-children-page.component';
+import { ManageStaffDetailPageComponent } from './shared/manage-page/manage-staff-detail-page/manage-staff-detail-page.component';
+import { ManageTeacherDetailPageComponent } from './shared/manage-page/manage-teacher-detail-page/manage-teacher-detail-page.component';
 
 const routes: Routes = [
   {
@@ -59,7 +68,10 @@ const routes: Routes = [
     children: [
       { path: '', component: ChildrenClassPageComponent },
       { path: 'feedback', component: ChildrenFeedbackPageComponent },
-      { path: 'create-feedback', component: ChildrenCreateFeedbackPageComponent}
+      {
+        path: 'create-feedback',
+        component: ChildrenCreateFeedbackPageComponent,
+      },
     ],
   },
   {
@@ -71,21 +83,30 @@ const routes: Routes = [
   },
 
   {
-    path: 'manage',
+    path: 'manager',
     component: ManagePageComponent,
     children: [
       { path: '', component: ManageActivityPageComponent },
+      { path: 'create-activity', component: ManageCreateActivityPageComponent },
+      { path: 'children', component: ManageChildrenPageComponent },
+      { path: 'course', component: ManageCoursePageComponent },
+      { path: 'create-course', component: ManageCreateCoursePageComponent },
       { path: 'admin', component: ManageClassPageComponent },
       { path: 'class', component: ManageClassPageComponent },
+      { path: 'create-class', component: ManageCreateClassPageComponent },
       { path: 'equipment', component: ManageEquipmentPageComponent },
+      { path: 'create-equipment', component: ManageCreateEquipmentPageComponent },
       { path: 'feedback', component: ManageFeedbackPageComponent },
       { path: 'parent', component: ManageParentPageComponent },
       { path: 'payment', component: ManagePaymentPageComponent },
       { path: 'report', component: ManageReportPageComponent },
       { path: 'room', component: ManageRoomPageComponent },
+      { path: 'create-room', component: ManageCreateRoomPageComponent },
       { path: 'staff', component: ManageStaffPageComponent },
+      { path: 'staff-detail/:id', component: ManageStaffDetailPageComponent},
       { path: 'student', component: ManageStudentPageComponent },
       { path: 'teacher', component: ManageTeacherPageComponent },
+      { path: 'teacher-detail/:id', component: ManageTeacherDetailPageComponent},
     ],
   },
   {
@@ -95,7 +116,7 @@ const routes: Routes = [
       { path: '', component: ParentManageChildrenPageComponent },
       { path: 'feedback', component: ParentFeedbackPageComponent },
       { path: 'payment', component: ParentManagePaymentPageComponent },
-      { path: 'create-children', component: ParentCreateChildrenPageComponent}
+      { path: 'create-children', component: ParentCreateChildrenPageComponent },
     ],
   },
   {
@@ -113,7 +134,7 @@ const routes: Routes = [
       { path: '', component: TeacherClassPageComponent },
       { path: 'feedback', component: TeacherFeedbackPageComponent },
       { path: 'report', component: TeacherReportPageComponent },
-      { path: 'create-report', component: TeacherCreateReportPageComponent}
+      { path: 'create-report', component: TeacherCreateReportPageComponent },
     ],
   },
   { path: 'profile', component: ProfilePageComponent },

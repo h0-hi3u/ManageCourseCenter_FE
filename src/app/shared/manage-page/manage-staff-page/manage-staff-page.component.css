@@ -311,10 +311,8 @@ tr:hover {
 .employee-table td:first-child,
 .employee-table th:nth-child(2),
 .employee-table td:nth-child(2),
-.employee-table th:nth-child(3),
-.employee-table td:nth-child(3),
-.employee-table th:nth-child(3),
-.employee-table td:nth-child(3) {
+.employee-table th:nth-child(4),
+.employee-table td:nth-child(4) {
     width: 19.5%;
 }
 
@@ -334,10 +332,8 @@ tr:hover {
 .parent-table td:first-child,
 .parent-table th:nth-child(2),
 .parent-table td:nth-child(2),
-.parent-table th:nth-child(3),
-.parent-table td:nth-child(3),
-.parent-table th:nth-child(3),
-.parent-table td:nth-child(3) {
+.parent-table th:nth-child(4),
+.parent-table td:nth-child(4) {
     width: 19.5%;
 }
 

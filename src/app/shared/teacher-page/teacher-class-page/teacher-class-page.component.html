@@ -2,7 +2,7 @@
     <div class="add-new-container">
         <div class="header">Teacher Class List</div>
     </div>
-    <div class="search-filter-container">
+    <!-- <div class="search-filter-container">
         <div class="search-container">
             <input type="text" placeholder="Search...">
             <button class="search-button">Search</button>
@@ -21,7 +21,7 @@
             </select>
             <button class="filter-button">Filter</button>
         </div>
-    </div>
+    </div> -->
 
     <table class="teacher-class-table">
         <thead>
@@ -33,46 +33,102 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>Course name</td>
-                <td>Class name</td>
-                <td>24</td>
-                <td>
-                    <a href="#">Detail</a>
-                </td>
-            </tr>
-            <tr>
-                <td>Course name</td>
-                <td>Class name</td>
-                <td>24</td>
-                <td>
-                    <a href="#">Detail</a>
-                </td>
-            </tr>
-            <tr>
-                <td>Course name</td>
-                <td>Class name</td>
-                <td>24</td>
-                <td>
-                    <a href="#">Detail</a>
-                </td>
-            </tr>
-            <tr>
-                <td>Course name</td>
-                <td>Class name</td>
-                <td>24</td>
-                <td>
-                    <a href="#">Detail</a>
-                </td>
-            </tr>
-            <tr>
-                <td>Course name</td>
-                <td>Class name</td>
-                <td>24</td>
+            <tr *ngFor="let class of listClass">
+                <td>{{class.course.name}}</td>
+                <td>{{class.name}}</td>
+                <td>{{class.totalAmount}}</td>
                 <td>
                     <a href="#">Detail</a>
                 </td>
             </tr>
         </tbody>
     </table>
+    <div id="pagination"
+        *ngIf="listClass.length != 0">
+        <ul class="list-ul" style="display: inline-flex;">
+            <li (click)="movePage(currentPageIndex - 1)"
+                *ngIf="currentPageIndex > 1"
+                class="list-li">
+                <fa-icon
+                    class="icon-page"
+                    [icon]="faAnglesLeft"></fa-icon>
+            </li>
+            <li *ngIf="currentPageIndex > 3"
+                class="list-li">
+                <button (click)="movePage(1)"
+                    class="button-move-page">
+                    {{1}}
+                </button>
+            </li>
+            <li
+                *ngIf="currentPageIndex > 4"
+                class="list-li">
+                <span
+                    class="w-full h-full flex justify-center items-center">...</span>
+            </li>
+            <li *ngIf="currentPageIndex > 2"
+                class="w-8 h-full border-x text-ellipsis overflow-hidden border-x-gray-400 flex justify-center items-center cursor-pointer text-blue-400">
+                <button
+                    (click)="movePage(currentPageIndex - 2)"
+                    class="button-move-page">
+                    {{currentPageIndex- 2}}
+                </button>
+            </li>
+            <li *ngIf="currentPageIndex > 1"
+                class="list-li">
+                <button
+                    (click)="movePage(currentPageIndex - 1)"
+                    class="button-move-page">
+                    {{currentPageIndex- 1}}
+                </button>
+            </li>
+            <li
+                class="list-li">
+                <button
+                    (click)="movePage(currentPageIndex)"
+                    class="button-move-page">
+                    {{currentPageIndex}}
+                </button>
+            </li>
+            <li
+                *ngIf="arrayTotalPage.length > 2 && currentPageIndex < arrayTotalPage.length - 1"
+                class="list-li">
+                <button
+                    (click)="movePage(currentPageIndex + 1)"
+                    class="button-move-page">
+                    {{currentPageIndex + 1}}
+                </button>
+            </li>
+            <li
+                *ngIf="arrayTotalPage.length > 3 && currentPageIndex < arrayTotalPage.length - 2"
+                class="list-li">
+                <button
+                    (click)="movePage(currentPageIndex + 2)"
+                    class="button-move-page">
+                    {{currentPageIndex + 2}}
+                </button>
+            </li>
+            <li
+                *ngIf="currentPageIndex < arrayTotalPage.length - 3"
+                class="list-li">
+                <span
+                    class="w-full h-full flex justify-center items-center">...</span>
+            </li>
+            <li *ngIf="currentPageIndex != arrayTotalPage.length"
+                class="list-li">
+                <button
+                    (click)="movePage(arrayTotalPage.length)"
+                    class="button-move-page">
+                    {{arrayTotalPage.length}}
+                </button>
+            </li>
+            <li (click)="movePage(currentPageIndex + 1)"
+                *ngIf="!(currentPageIndex == arrayTotalPage.length)"
+                class="list-li">
+                <fa-icon
+                    class="icon-page"
+                    [icon]="faAnglesRight"></fa-icon>
+            </li>
+        </ul>
+    </div>
 </div>

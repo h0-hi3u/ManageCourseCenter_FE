@@ -2,7 +2,7 @@ import { HelperDate } from './../../../core/helpers/helperDate';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ResponseDto } from 'src/app/core/models/reponseDto';
-import { Teacher } from 'src/app/core/models/teacher';
+import { Teacher } from 'src/app/core/models/teacherDto/teacher';
 import { TeacherService } from 'src/app/core/services/teacher.service';
 
 @Component({

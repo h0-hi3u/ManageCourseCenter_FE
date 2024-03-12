@@ -2,7 +2,7 @@ import { CartItem } from "./cartItem";
 import { ChildrenClass } from "./childrenClass";
 import { ClassTime } from "./classTime";
 import { Course } from "./coures";
-import { Teacher } from "./teacher";
+import { Teacher } from "./teacherDto/teacher";
 
 export interface Class {
     id: number;

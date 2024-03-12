@@ -1,0 +1,50 @@
+<div class="container">
+    <h1>Profile Settings</h1>
+    <div class="profile-container">
+        <img id="profile-picture" src="https://buffer.com/cdn-cgi/image/w=1000,fit=contain,q=90,f=auto/library/content/images/size/w600/2023/10/free-images.jpg" alt="Profile Picture">
+    </div>
+    <div *ngIf="messageUpdate != ''" style="color: red; text-align: center;">{{messageUpdate}}</div>
+    <form [formGroup]="updateTeacherForm" (ngSubmit)="updateInformation()">
+        <div class="form-group">
+            <label for="fullname">Full Name</label>
+            <input type="text" id="username" name="username" formControlName="fullName" [ngClass]="{'invalid' : updateTeacherForm.get('fullName')?.invalid && updateTeacherForm.get('fullName')?.touched}">
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="inval" id="email" name="email" formControlName="email" [ngClass]="{'invalid' : updateTeacherForm.get('email')?.invalid && updateTeacherForm.get('email')?.touched}">
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" formControlName="phone" [ngClass]="{'invalid' : (updateTeacherForm.get('phone')?.invalid && updateTeacherForm.get('phone')?.touched) || (updateTeacherForm.get('phoneNumber')?.hasError('invalidStart') || updateTeacherForm.get('phoneNumber')?.hasError('invalidLength')) && updateTeacherForm.get('phoneNumber')?.touched}">
+        </div>
+        <div class="form-group">
+            <label for="birth">Birth Day</label>
+            <input type="date" id="birth" name="birth" formControlName="birthDay" [ngClass]="{'invalid' : updateTeacherForm.get('birthDay')?.invalid && updateTeacherForm.get('birthDay')?.touched}">
+        </div>
+        <div class="form-group">
+            <label for="gender">Gender</label>
+            <select name="gender" id="gender" formControlName="gender" [ngClass]="{'invalid' : updateTeacherForm.get('gender')?.invalid && updateTeacherForm.get('gender')?.touched}">
+                <option value="1">Male</option>
+                <option value="2">Female</option>
+                <option value="3">Other</option>
+            </select>
+        </div>
+        <button type="submit" [disabled]="updateTeacherForm.invalid">Save</button>
+    </form>
+    <h3>Change Password</h3>
+    <form>
+        <div class="form-group">
+            <label for="oldpassword">Old Password</label>
+            <input type="text" id="oldpassword" name="oldpassword" value="Old Password">
+        </div>
+        <div class="form-group">
+            <label for="newpassword">New Password</label>
+            <input type="text" id="newpassword" name="newpassword" value="New Password">
+        </div>
+        <div class="form-group">
+            <label for="confirmpassword">Confirm Password</label>
+            <input type="text" id="confirmpassword" name="confirmpassword" value="Confirm Password">
+        </div>
+        <button type="submit">Change</button>
+    </form>
+</div>

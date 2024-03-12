@@ -9,10 +9,16 @@ import { environment } from "src/environment/environment";
 })
 export class EquipmentService {
     private readonly urlGetEquipmentByRoomId = 'Equipment/get-equipment-by-room-id';
+    private readonly urlGetAllEquipment = 'Equipment/get-all';
     constructor(private http: HttpClient) {}
     public getEquipmentByRoomId(roomId: string) : Observable<ResponseDto> {
         return this.http.get<ResponseDto>(
             `${environment.urlApi}/${this.urlGetEquipmentByRoomId}?roomId=${roomId}`
+        )
+    }
+    public getAll() : Observable<ResponseDto> {
+        return this.http.get<ResponseDto>(
+            `${environment.urlApi}/${this.urlGetAllEquipment}`
         )
     }
 }

@@ -1,6 +1,6 @@
 import { ChildrenClass } from "./childrenClass";
 import { Room } from "./room";
-import { Teacher } from "./teacher";
+import { Teacher } from "./teacherDto/teacher";
 
 export interface Schedule {
     id: number;

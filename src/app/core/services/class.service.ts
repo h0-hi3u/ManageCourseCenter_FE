@@ -9,10 +9,16 @@ import { environment } from "src/environment/environment";
 })
 export class ClassService {
     private readonly urlGetClassByTeacherId = 'Class/get-class-teacher-by-id';
+    private readonly urlGetClassByChildrenId = 'Class/get-class-by-children-id';
     constructor(private http: HttpClient) {}
     public getClassByTeacherId(teacherId: string, pageSize: number, pageIndex: number) :Observable<ResponseDto> {
         return this.http.get<ResponseDto>(
             `${environment.urlApi}/${this.urlGetClassByTeacherId}?teacherId=${teacherId}&pageSize=${pageSize}&pageIndex=${pageIndex}`
+        )
+    }
+    public getClassByChildrenId(childrenId: string, pageSize: number, pageIndex: number) : Observable<ResponseDto> {
+        return this.http.get<ResponseDto>(
+            `${environment.urlApi}/${this.urlGetClassByChildrenId}?childrenId=${childrenId}&pageSize=${pageSize}&pageIndex=${pageIndex}`
         )
     }
 }

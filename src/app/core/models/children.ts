@@ -1,4 +1,4 @@
-import { AcademicTranscript } from "./academicTransript";
+import { AcademicTranscript } from "./academicTranscript";
 import { CartItem } from "./cartItem";
 import { ChildrenClass } from "./childrenClass";
 import { Parent } from "./parentDto/parent";

@@ -61,6 +61,9 @@ import { TeacherDetailPageComponent } from './shared/teacher-page/teacher-detail
 import { StaffEquipmentPageComponent } from './shared/staff-page/staff-equipment-page/staff-equipment-page.component';
 import { StaffEquipmentActivityPageComponent } from './shared/staff-page/staff-equipment-activity-page/staff-equipment-activity-page.component';
 import { StaffProfilePageComponent } from './shared/staff-page/staff-profile-page/staff-profile-page.component';
+import { ChildrenProfilePageComponent } from './shared/children-page/children-profile-page/children-profile-page.component';
+import { ChildrenTranscriptPageComponent } from './shared/children-page/children-transcript-page/children-transcript-page.component';
+import { ChildrenDetailTranscriptPageComponent } from './shared/children-page/children-detail-transcript-page/children-detail-transcript-page.component';
 
 @NgModule({
   declarations: [
@@ -119,6 +122,9 @@ import { StaffProfilePageComponent } from './shared/staff-page/staff-profile-pag
     StaffEquipmentPageComponent,
     StaffEquipmentActivityPageComponent,
     StaffProfilePageComponent,
+    ChildrenProfilePageComponent,
+    ChildrenTranscriptPageComponent,
+    ChildrenDetailTranscriptPageComponent,
   ],
   imports: [
     BrowserModule,

@@ -46,7 +46,7 @@
         </tbody>
     </table>
     <div id="pagination"
-        *ngIf="listFeedback.length != 0">
+        *ngIf="arrayTotalPage.length > 1">
         <ul class="list-ul" style="display: inline-flex;">
             <li (click)="movePage(currentPageIndex - 1)"
                 *ngIf="currentPageIndex > 1"

@@ -1,6 +1,6 @@
 <div class="container">
     <div class="add-new-container">
-        <div class="header">Children Feedback List</div>
+        <div class="header">Children Academic Transcripts List</div>
     </div>
     <div class="search-filter-container">
         <div class="search-container">
@@ -10,7 +10,8 @@
         <div class="filter-container">
             <select>
                 <option value="course">Course Name</option>
-                <option value="class">Class Name</option>
+                <option value="average">Average</option>
+                <option value="result">Result</option>
             </select>
             <select>
                 <option value="all">Default</option>
@@ -21,26 +22,23 @@
         </div>
     </div>
 
-    <table class="children-feedback-table">
+    <table class="children-transcript-table">
         <thead>
             <tr>
                 <th>Course Name</th>
-                <th>Class Name</th>
-                <th>Course Rating</th>
-                <th>Teacher Rating</th>
-                <th>Equipment Rating</th>
+                <th>Average</th>
+                <th>Result</th>
                 <th>Action</th>
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let feedback of listFeedback">
-                <td>{{feedback.childrenClass.class.course.name}}</td>
-                <td>{{feedback.childrenClass.class.name}}</td>
-                <td>{{feedback.courseRating}}</td>
-                <td>{{feedback.teacherRating}}</td>
-                <td>{{feedback.equipmentRating}}</td>
+            <tr *ngFor="let transcript of listTranscript">
+                <td>{{transcript.course.name}}</td>
+                <td>{{transcript.average}}</td>
+                <td *ngIf="transcript.average >= 5" style="color: green; font-weight: 700;">Pass</td>
+                <td *ngIf="transcript.average < 5" style="color: red; font-weight: 700;">Fail</td>
                 <td>
-                    <a href="#">Detail</a>
+                    <button style="border: none; background-color: transparent; color: blue;" (click)="goToDetailTranscript(transcript.id)">Detail</button>
                 </td>
             </tr>
         </tbody>

@@ -21,8 +21,6 @@ export class TeacherClassPageComponent implements OnInit{
     this.movePage();
  }
  getArrayTotalPage(count: number) {
-  console.log(count);
-  
 const totalPage = Math.ceil(count/this.pageSize);
 console.log(totalPage);
 

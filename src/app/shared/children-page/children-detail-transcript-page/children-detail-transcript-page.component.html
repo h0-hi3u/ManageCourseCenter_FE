@@ -1,0 +1,47 @@
+<div class="container">
+    <h1>Transcript Detail</h1>
+    <form method="post">
+        <div class="form-group">
+            <label for="coursename">Course Name</label>
+            <div style="color: #007bff; font-size: 18px; font-weight: 700;">{{transcript.course.name}}</div>
+        </div>
+    </form>
+    <table class="transcript-table">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Mark</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Quiz 1</th>
+                <td>{{transcript.quiz1}}</td>
+            </tr>
+            <tr>
+                <th>Quiz 2</th>
+                <td>{{transcript.quiz2}}</td>
+            </tr>
+            <tr>
+                <th>Midterm</th>
+                <td>{{transcript.midterm}}</td>
+            </tr>
+            <tr>
+                <th>Final</th>
+                <td>{{transcript.final}}</td>
+            </tr>
+            <tr>
+                <th>Average</th>
+                <td>{{transcript.average}}</td>
+            </tr>
+            <tr>
+                <th>Result</th>
+                <td *ngIf="transcript.average >= 5" style="color: green; font-weight: 700;">Pass</td>
+                <td *ngIf="transcript.average < 5" style="color: red; font-weight: 700;">Fail</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="btn-container">
+        <a href="/children/transcript" class="btnClose" style="padding: 5px 10px; border: 1px black solid;">Close</a>
+    </div>
+</div>

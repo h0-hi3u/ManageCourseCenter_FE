@@ -1,6 +1,6 @@
-import { AcademicTranscript } from "./academicTransript";
-import { Class } from "./class";
-import { Schedule } from "./schedule";
+import { AcademicTranscript } from "../academicTransript";
+import { Class } from "../class";
+import { Schedule } from "../schedule";
 
 export interface Teacher {
     id: number;

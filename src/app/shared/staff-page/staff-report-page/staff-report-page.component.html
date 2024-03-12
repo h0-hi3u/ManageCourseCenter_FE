@@ -50,9 +50,8 @@
                 <td *ngIf="report.status == 1">Open</td>
                 <td *ngIf="report.status == 2">Close</td>
                 <td *ngIf="report.status == 3">Delete</td>
-                <td>
-                    <a href="#">Detail</a>
-                </td>
+                <td *ngIf="report.status == 1"><button class="btn-solve" style="border: none;">Solved</button></td>
+                <td *ngIf="report.status != 1">None</td>
             </tr>
             <!--  -->
             <tr>

@@ -1,5 +1,5 @@
 import { Equipment } from "./equipment";
-import { Manager } from "../manager";
+import { Manager } from "../managerDto/manager";
 import { Room } from "../room";
 
 export interface EquipmentActivity {

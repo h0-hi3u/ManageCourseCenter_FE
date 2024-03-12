@@ -1,4 +1,4 @@
-import { Teacher } from 'src/app/core/models/teacher';
+import { Teacher } from 'src/app/core/models/teacherDto/teacher';
 import { TeacherService } from './../../../core/services/teacher.service';
 import { Component, OnInit } from '@angular/core';
 import { ResponseDto } from 'src/app/core/models/reponseDto';

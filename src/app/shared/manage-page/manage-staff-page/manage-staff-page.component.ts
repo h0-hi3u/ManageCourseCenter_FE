@@ -1,7 +1,7 @@
 import { StaffService } from './../../../core/services/staff.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Manager } from 'src/app/core/models/manager';
+import { Manager } from 'src/app/core/models/managerDto/manager';
 import { ResponseDto } from 'src/app/core/models/reponseDto';
 
 @Component({

@@ -1,0 +1,57 @@
+<div class="container">
+    <div class="add-new-container">
+        <div class="header">Activity List</div>
+        <section>
+            <button class="add-button">Add New</button>
+            <button class="export-button">Export</button>
+        </section>
+    </div>
+    <div class="search-filter-container">
+        <div class="search-container">
+            <input type="text" placeholder="Search...">
+            <button class="search-button">Search</button>
+        </div>
+        <div class="filter-container">
+            <select>
+                <option value="manager">Manager Name</option>
+                <option value="equipment">Equipment Name</option>
+                <option value="room">Room No</option>
+                <option value="time">Operate Time</option>
+                <option value="activity">Activity</option>
+            </select>
+            <select>
+                <option value="all">Default</option>
+                <option value="active">Inscreasing</option>
+                <option value="inactive">Descreasing</option>
+            </select>
+            <button class="filter-button">Filter</button>
+        </div>
+    </div>
+
+    <table class="activity-table">
+        <thead>
+            <tr>
+                <th>Manager Name</th>
+                <th>Equipment Name</th>
+                <th>Room No</th>
+                <th>Operate Time</th>
+                <th>Activity</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let activity of listActivity">
+                <td>{{activity.manager.fullName}}</td>
+                <td>{{activity.equipment.name}}</td>
+                <td>{{activity.room.roomNo}}</td>
+                <td>{{helperDate.formatDateYearMonthDayDate(activity.operateTime)}}</td>
+                <td *ngIf="activity.action == 1">Storage</td>
+                <td *ngIf="activity.action == 2">Moving</td>
+                <td *ngIf="activity.action == 3">Maintain</td>
+                <td>
+                    <a href="#">Detail</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -39,7 +39,6 @@ export class RegisterPageComponent {
       parentCreateDto.gender = parseInt(this.getForm.gender.value || '0');
       parentCreateDto.role = 1;
       parentCreateDto.status = 1;
-      console.log(parentCreateDto);
       
       this.parentService.createParent(parentCreateDto).subscribe((res: ResponseDto) => {
         console.log(res);

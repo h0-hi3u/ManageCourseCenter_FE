@@ -1,6 +1,6 @@
 import { Children } from "./children";
 import { Course } from "./coures";
-import { Teacher } from "./teacher";
+import { Teacher } from "./teacherDto/teacher";
 
 export interface AcademicTranscript {
     id: number;

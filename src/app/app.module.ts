@@ -57,6 +57,10 @@ import { ManageCreateCoursePageComponent } from './shared/manage-page/manage-cre
 import { ManageStaffDetailPageComponent } from './shared/manage-page/manage-staff-detail-page/manage-staff-detail-page.component';
 import { ManageTeacherDetailPageComponent } from './shared/manage-page/manage-teacher-detail-page/manage-teacher-detail-page.component';
 import { DatePipe } from '@angular/common';
+import { TeacherDetailPageComponent } from './shared/teacher-page/teacher-detail-page/teacher-detail-page.component';
+import { StaffEquipmentPageComponent } from './shared/staff-page/staff-equipment-page/staff-equipment-page.component';
+import { StaffEquipmentActivityPageComponent } from './shared/staff-page/staff-equipment-activity-page/staff-equipment-activity-page.component';
+import { StaffProfilePageComponent } from './shared/staff-page/staff-profile-page/staff-profile-page.component';
 
 @NgModule({
   declarations: [
@@ -111,6 +115,10 @@ import { DatePipe } from '@angular/common';
     ManageCreateCoursePageComponent,
     ManageStaffDetailPageComponent,
     ManageTeacherDetailPageComponent,
+    TeacherDetailPageComponent,
+    StaffEquipmentPageComponent,
+    StaffEquipmentActivityPageComponent,
+    StaffProfilePageComponent,
   ],
   imports: [
     BrowserModule,

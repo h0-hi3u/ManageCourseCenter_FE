@@ -1,3 +1,4 @@
+import { TeacherUpdateDto } from './../models/teacherDto/teacherUpdateDto';
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
@@ -10,6 +11,7 @@ import { environment } from "src/environment/environment";
 export class TeacherService {
     private readonly urlGetAll = 'Teacher/get-all';
     private readonly urlGetById = 'Teacher/get-teacher-id';
+    private readonly urlUpdate = 'Teacher/update-teacher-by-Id';
     constructor(private http: HttpClient) {}
 
     public getAll() : Observable<ResponseDto> {
@@ -20,6 +22,11 @@ export class TeacherService {
     public getById(teacherId: string) : Observable<ResponseDto> {
         return this.http.get<ResponseDto>(
             `${environment.urlApi}/${this.urlGetById}?id=${teacherId}`
+        )
+    }
+    public updateTeacher(teacherId: number, teacherUpdateDto: TeacherUpdateDto) : Observable<ResponseDto> {
+        return this.http.put<ResponseDto>(
+            `${environment.urlApi}/${this.urlUpdate}?teacherId=${teacherId}`, teacherUpdateDto
         )
     }
 }

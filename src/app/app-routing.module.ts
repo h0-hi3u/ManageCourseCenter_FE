@@ -49,6 +49,10 @@ import { ManageCreateCoursePageComponent } from './shared/manage-page/manage-cre
 import { ManageChildrenPageComponent } from './shared/manage-page/manage-children-page/manage-children-page.component';
 import { ManageStaffDetailPageComponent } from './shared/manage-page/manage-staff-detail-page/manage-staff-detail-page.component';
 import { ManageTeacherDetailPageComponent } from './shared/manage-page/manage-teacher-detail-page/manage-teacher-detail-page.component';
+import { TeacherDetailPageComponent } from './shared/teacher-page/teacher-detail-page/teacher-detail-page.component';
+import { StaffEquipmentActivityPageComponent } from './shared/staff-page/staff-equipment-activity-page/staff-equipment-activity-page.component';
+import { StaffEquipmentPageComponent } from './shared/staff-page/staff-equipment-page/staff-equipment-page.component';
+import { StaffProfilePageComponent } from './shared/staff-page/staff-profile-page/staff-profile-page.component';
 
 const routes: Routes = [
   {
@@ -125,6 +129,9 @@ const routes: Routes = [
     children: [
       { path: '', component: StaffReportPageComponent },
       { path: 'room', component: StaffRoomPageComponent },
+      { path: 'activity', component: StaffEquipmentActivityPageComponent},
+      { path: 'equipment', component: StaffEquipmentPageComponent},
+      { path: 'profile', component: StaffProfilePageComponent}
     ],
   },
   {
@@ -132,6 +139,7 @@ const routes: Routes = [
     component: TeacherPageComponent,
     children: [
       { path: '', component: TeacherClassPageComponent },
+      { path: 'profile', component: TeacherDetailPageComponent },
       { path: 'feedback', component: TeacherFeedbackPageComponent },
       { path: 'report', component: TeacherReportPageComponent },
       { path: 'create-report', component: TeacherCreateReportPageComponent },

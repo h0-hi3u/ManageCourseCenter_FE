@@ -1,5 +1,5 @@
 import { ChildrenClass } from "./childrenClass";
-import { Room } from "./room";
+import { Room } from "./roomDto/room";
 import { Teacher } from "./teacherDto/teacher";
 
 export interface Schedule {

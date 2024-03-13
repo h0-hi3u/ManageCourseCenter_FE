@@ -3,7 +3,7 @@ import { RoomService } from './../../../core/services/room.service';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { EquipmentService } from 'src/app/core/services/equipment.service';
-import { Room } from 'src/app/core/models/room';
+import { Room } from 'src/app/core/models/roomDto/room';
 import { ResponseDto } from 'src/app/core/models/reponseDto';
 import { Equipment } from 'src/app/core/models/equipmentDto/equipment';
 import { EquipmentReport } from 'src/app/core/models/equipmentDto/equipmentReport';

@@ -9,10 +9,16 @@ import { Observable } from "rxjs";
 })
 export class EquipmentReportService {
     private readonly urlGetAllEquipmentReport = 'EquipmentReport/get-all-equip-report';
+    private readonly urlGetAllPaging = 'EquipmentReport/get-all-equipment-paging';
     constructor(private http: HttpClient) {}
     public getAll() : Observable<ResponseDto> {
         return this.http.get<ResponseDto> (
             `${environment.urlApi}/${this.urlGetAllEquipmentReport}`
+        )
+    }
+    public getAllPaging(pageSize: number, pageIndex: number) : Observable<ResponseDto> {
+        return this.http.get<ResponseDto>(
+            `${environment.urlApi}/${this.urlGetAllPaging}?pageSize=${pageSize}&pageIndex=${pageIndex}`
         )
     }
 }

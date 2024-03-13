@@ -1,5 +1,5 @@
 import { Equipment } from "./equipment";
-import { Room } from "../room";
+import { Room } from "../roomDto/room";
 
 export interface EquipmentReport {
     id: number;

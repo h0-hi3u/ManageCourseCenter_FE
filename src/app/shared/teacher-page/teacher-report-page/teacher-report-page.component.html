@@ -33,28 +33,112 @@
             <tr>
                 <th>Room</th>
                 <th>Equipment</th>
-                <th>Assign To</th>
                 <th>Send Time</th>
                 <th>Solve Time</th>
                 <th>Status</th>
-                <th>Action</th>
+                <th>Description</th>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let report of listReport">
                 <td>{{report.room.roomNo}}</td>
                 <td>{{report.equipment.name}}</td>
-                <td>Role</td>
                 <td>{{helperDate.formatDateYearMonthDayDate(report.sendTime)}}</td>
                 <td *ngIf="report.closeTime">{{helperDate.formatDateYearMonthDayDate(report.closeTime)}}</td>
                 <td *ngIf="!report.closeTime">Maintaining</td>
                 <td *ngIf="report.status == 1">Opening</td>
                 <td *ngIf="report.status == 2">Closed</td>
                 <td *ngIf="report.status == 3">Deleted</td>
-                <td>
-                    <a href="#">Detail</a>
-                </td>
+                <td>{{report.description}}</td>
             </tr>
         </tbody>
     </table>
+    <div id="pagination"
+    *ngIf="listReport.length > 0">
+    <ul class="list-ul" style="display: inline-flex;">
+        <li (click)="movePage(currentPageIndex - 1)"
+            *ngIf="currentPageIndex > 1"
+            class="list-li">
+            <fa-icon
+                class="icon-page"
+                [icon]="faAnglesLeft"></fa-icon>
+        </li>
+        <li *ngIf="currentPageIndex > 3"
+            class="list-li">
+            <button (click)="movePage(1)"
+                class="button-move-page">
+                {{1}}
+            </button>
+        </li>
+        <li
+            *ngIf="currentPageIndex > 4"
+            class="list-li">
+            <span
+                class="w-full h-full flex justify-center items-center">...</span>
+        </li>
+        <li *ngIf="currentPageIndex > 2"
+            class="w-8 h-full border-x text-ellipsis overflow-hidden border-x-gray-400 flex justify-center items-center cursor-pointer text-blue-400">
+            <button
+                (click)="movePage(currentPageIndex - 2)"
+                class="button-move-page">
+                {{currentPageIndex- 2}}
+            </button>
+        </li>
+        <li *ngIf="currentPageIndex > 1"
+            class="list-li">
+            <button
+                (click)="movePage(currentPageIndex - 1)"
+                class="button-move-page">
+                {{currentPageIndex- 1}}
+            </button>
+        </li>
+        <li
+            class="list-li">
+            <button
+                (click)="movePage(currentPageIndex)"
+                class="button-move-page">
+                {{currentPageIndex}}
+            </button>
+        </li>
+        <li
+            *ngIf="arrayTotalPage.length > 2 && currentPageIndex < arrayTotalPage.length - 1"
+            class="list-li">
+            <button
+                (click)="movePage(currentPageIndex + 1)"
+                class="button-move-page">
+                {{currentPageIndex + 1}}
+            </button>
+        </li>
+        <li
+            *ngIf="arrayTotalPage.length > 3 && currentPageIndex < arrayTotalPage.length - 2"
+            class="list-li">
+            <button
+                (click)="movePage(currentPageIndex + 2)"
+                class="button-move-page">
+                {{currentPageIndex + 2}}
+            </button>
+        </li>
+        <li
+            *ngIf="currentPageIndex < arrayTotalPage.length - 3"
+            class="list-li">
+            <span
+                class="w-full h-full flex justify-center items-center">...</span>
+        </li>
+        <li *ngIf="currentPageIndex != arrayTotalPage.length"
+            class="list-li">
+            <button
+                (click)="movePage(arrayTotalPage.length)"
+                class="button-move-page">
+                {{arrayTotalPage.length}}
+            </button>
+        </li>
+        <li (click)="movePage(currentPageIndex + 1)"
+            *ngIf="!(currentPageIndex == arrayTotalPage.length)"
+            class="list-li">
+            <fa-icon
+                class="icon-page"
+                [icon]="faAnglesRight"></fa-icon>
+        </li>
+    </ul>
+</div>
 </div>

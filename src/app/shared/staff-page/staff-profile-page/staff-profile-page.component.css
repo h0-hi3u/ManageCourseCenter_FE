@@ -37,7 +37,13 @@ select {
     border-radius: 5px;
     box-sizing: border-box;
 }
+.invalid {
+    border: 1px red solid !important;
+}
+.form-group .invalid {
+    border: 1px red solid !important;
 
+}
 button {
     display: block;
     width: 15%;

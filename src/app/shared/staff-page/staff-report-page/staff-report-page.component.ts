@@ -9,9 +9,9 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-staff-report-page',
   templateUrl: './staff-report-page.component.html',
-  styleUrls: ['./staff-report-page.component.css']
+  styleUrls: ['./staff-report-page.component.css'],
 })
-export class StaffReportPageComponent implements OnInit{
+export class StaffReportPageComponent implements OnInit {
   listReport: EquipmentReport[] = [];
   currentPageIndex = 1;
   pageSize = 10;
@@ -20,27 +20,40 @@ export class StaffReportPageComponent implements OnInit{
   arrayTotalPage: number[] = [];
   constructor(
     private equipmentReportService: EquipmentReportService,
-    public helperDate : HelperDate,
+    public helperDate: HelperDate,
     private router: Router
-    ) {}
+  ) {}
   ngOnInit(): void {
-      this.movePage();
+    this.movePage();
   }
   getArrayTotalPage(count: number) {
-    
-    const totalPage = Math.ceil(count/this.pageSize);
-    console.log(totalPage);
-    
-      for (let i = 1; i <= totalPage; i++) {
-        this.arrayTotalPage.push(i);
-      }
+    const totalPage = Math.ceil(count / this.pageSize);
+    for (let i = 1; i <= totalPage; i++) {
+      this.arrayTotalPage.push(i);
     }
-    public movePage(currentPage?: number) {
-      this.currentPageIndex = currentPage || this.currentPageIndex;
-      this.arrayTotalPage = [];
-      this.equipmentReportService.getAllPaging(this.pageSize, this.currentPageIndex).subscribe((res: ResponseDto) => {
+  }
+  public movePage(currentPage?: number) {
+    this.currentPageIndex = currentPage || this.currentPageIndex;
+    this.arrayTotalPage = [];
+    this.equipmentReportService
+      .getAllPaging(this.pageSize, this.currentPageIndex)
+      .subscribe((res: ResponseDto) => {
         this.listReport = res.data.data;
         this.getArrayTotalPage(res.data.totalRecords);
       });
-    }
+  }
+
+  public closeReport(reportId: number) {
+    console.log('close');
+    
+    this.equipmentReportService
+      .closeEquipmentReport(reportId)
+      .subscribe((res: ResponseDto) => {
+        if (res.isSuccess) {
+          location.reload();
+        } else {
+          console.log('error');
+        }
+      });
+  }
 }

@@ -45,14 +45,15 @@
                 <td>{{staff.fullName}}</td>
                 <td>{{staff.email}}</td>
                 <td>{{staff.phone}}</td>
-                <td>{{staff.birthDay}}</td>
+                <td>{{helperDate.formatDateYearMonthDayDate(staff.birthDay)}}</td>
                 <td *ngIf="staff.gender == 1">Male</td>
                 <td *ngIf="staff.gender == 2">Female</td>
                 <td *ngIf="staff.status == 1">Active</td>
                 <td *ngIf="staff.status == 2">Inactive</td>
                 <td style="display: flex;">
-                    <button (click)="goToStaffDetail(staff.id)" style="padding-right: 10px; border: none; background-color: transparent; color: #1154b6;">Detail</button>
-                    <a href="#" style="padding-left: 10px; border-left: 1px black solid;">Inactivate</a>
+                    <button (click)="goToStaffDetail(staff.id)" style="padding-right: 10px; border: none; background-color: transparent; color: #1154b6;">Detail</button>|
+                    <button *ngIf="staff.status == 1" (click)="setInactive(staff.id)" style="padding-left: 10px; border: none; background-color: transparent; color: #1154b6;">Inactivate</button>
+                    <button *ngIf="staff.status == 2" (click)="setActive(staff.id)" style="padding-left: 10px; border: none; background-color: transparent; color: #1154b6;">Activate</button>
                 </td>
             </tr>
         </tbody>

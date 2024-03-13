@@ -57,6 +57,8 @@ import { ChildrenProfilePageComponent } from './shared/children-page/children-pr
 import { ChildrenTranscriptPageComponent } from './shared/children-page/children-transcript-page/children-transcript-page.component';
 import { ChildrenDetailTranscriptPageComponent } from './shared/children-page/children-detail-transcript-page/children-detail-transcript-page.component';
 import { StaffDetailRoomPageComponent } from './shared/staff-page/staff-detail-room-page/staff-detail-room-page.component';
+import { TeacherClassDetailPageComponent } from './shared/teacher-page/teacher-class-detail-page/teacher-class-detail-page.component';
+import { ParentProfilePageComponent } from './shared/parent-page/parent-profile-page/parent-profile-page.component';
 
 const routes: Routes = [
   {
@@ -128,6 +130,8 @@ const routes: Routes = [
       { path: 'feedback', component: ParentFeedbackPageComponent },
       { path: 'payment', component: ParentManagePaymentPageComponent },
       { path: 'create-children', component: ParentCreateChildrenPageComponent },
+      { path: 'create-children', component: ParentCreateChildrenPageComponent},
+      { path: 'profile', component: ParentProfilePageComponent}
     ],
   },
   {
@@ -151,6 +155,7 @@ const routes: Routes = [
       { path: 'feedback', component: TeacherFeedbackPageComponent },
       { path: 'report', component: TeacherReportPageComponent },
       { path: 'create-report', component: TeacherCreateReportPageComponent },
+      { path: 'class-detail/:id', component: TeacherClassDetailPageComponent},
     ],
   },
   { path: 'profile', component: ProfilePageComponent },

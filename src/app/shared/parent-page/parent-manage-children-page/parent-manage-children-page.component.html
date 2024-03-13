@@ -1,11 +1,11 @@
 <div class="container">
     <div class="add-new-container">
         <div class="header">Children List</div>
-        <section>
-            <button class="add-button">Add New</button>
-        </section>
+        <!-- <section>
+            <button class="add-button" (click)="goToCreateChild()">Add New</button>
+        </section> -->
     </div>
-    <div class="search-filter-container">
+    <!-- <div class="search-filter-container">
         <div class="search-container">
             <input type="text" placeholder="Search...">
             <button class="search-button">Search</button>
@@ -25,7 +25,7 @@
             </select>
             <button class="filter-button">Filter</button>
         </div>
-    </div>
+    </div> -->
 
     <table class="parent-children-table">
         <thead>
@@ -36,7 +36,7 @@
                 <th>Birth Date</th>
                 <th>Gender</th>
                 <th>Status</th>
-                <th>Action</th>
+                <!-- <th>Action</th> -->
             </tr>
         </thead>
         <tbody>
@@ -44,15 +44,15 @@
                 <td>{{child.fullName}}</td>
                 <td>{{child.username}}</td>
                 <td>{{child.password}}</td>
-                <td>{{child.birthDay}}</td>
+                <td>{{helperDate.formatDateYearMonthDayDate(child.birthDay)}}</td>
                 <td *ngIf="child.gender == 1">Male</td>
                 <td *ngIf="child.gender == 2">Female</td>
                 <td *ngIf="child.status == 1">Active</td>
                 <td *ngIf="child.status == 2">Inactive</td>
-                <td>
+                <!-- <td>
                     <a style="padding-right: 10px;" href="#">Detail</a>
                     <a style="padding-left: 10px; border-left: 1px black solid; " href="#">Inactivate</a>
-                </td>
+                </td> -->
             </tr>
         </tbody>
     </table>

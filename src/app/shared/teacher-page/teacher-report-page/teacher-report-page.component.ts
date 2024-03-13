@@ -14,7 +14,7 @@ import { faAnglesLeft, faAnglesRight } from '@fortawesome/free-solid-svg-icons';
 export class TeacherReportPageComponent implements OnInit{
   listReport: EquipmentReport[] = [];
   currentPageIndex = 1;
-  pageSize = 4;
+  pageSize = 10;
   faAnglesRight = faAnglesRight;
   faAnglesLeft = faAnglesLeft;
   arrayTotalPage: number[] = [];
@@ -30,10 +30,7 @@ export class TeacherReportPageComponent implements OnInit{
     this.router.navigate(['teacher/create-report']);
   }
   getArrayTotalPage(count: number) {
-    
     const totalPage = Math.ceil(count/this.pageSize);
-    console.log(totalPage);
-    
       for (let i = 1; i <= totalPage; i++) {
         this.arrayTotalPage.push(i);
       }
@@ -42,8 +39,10 @@ export class TeacherReportPageComponent implements OnInit{
       this.currentPageIndex = currentPage || this.currentPageIndex;
       this.arrayTotalPage = [];
       const teacherId = localStorage.getItem('teacherId');
-      this.reportService.getReportByTeacherId(parseInt(teacherId || '0'), 5, this.currentPageIndex).subscribe((res: ResponseDto) => {
+      this.reportService.getReportByTeacherId(parseInt(teacherId || '0'), this.pageSize, this.currentPageIndex).subscribe((res: ResponseDto) => {
+        
         this.listReport = res.data.data;
+        console.log(this.listReport);
         this.getArrayTotalPage(res.data.totalRecords);
       })
     }

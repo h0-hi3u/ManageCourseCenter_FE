@@ -1,11 +1,11 @@
 <div class="container">
     <div class="add-new-container">
         <div class="header">Payment List</div>
-        <section>
+        <!-- <section>
             <button class="export-button">Export</button>
-        </section>
+        </section> -->
     </div>
-    <div class="search-filter-container">
+    <!-- <div class="search-filter-container">
         <div class="search-container">
             <input type="text" placeholder="Search...">
             <button class="search-button">Search</button>
@@ -23,7 +23,7 @@
             </select>
             <button class="filter-button">Filter</button>
         </div>
-    </div>
+    </div> -->
 
     <table class="payment-table">
         <thead>
@@ -43,16 +43,6 @@
                 <td *ngIf="payment.status == 1">Processing</td>
                 <td *ngIf="payment.status == 2">Success</td>
                 <td *ngIf="payment.status == 3">Fail</td>
-                <td>
-                    <a href="#">Detail</a>
-                </td>
-            </tr>
-            <!--  -->
-            <tr>
-                <td>A Name</td>
-                <td>2024-03-08 15:30:00</td>
-                <td>Banking</td>
-                <td>Paid</td>
                 <td>
                     <a href="#">Detail</a>
                 </td>

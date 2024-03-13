@@ -1,3 +1,4 @@
+import { RoomUpdateDto } from './../models/roomDto/roomUpdateStatusDto';
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
@@ -9,11 +10,24 @@ import { environment } from "src/environment/environment";
 })
 export class RoomService {
     private readonly urlGetAll = 'Room/get-all';
+    private readonly urlGetById = 'Room/get-room-id';
+    private readonly urlUpdateStatus = '';
     constructor(private http: HttpClient) {}
 
     public getAll() : Observable<ResponseDto> {
         return this.http.get<ResponseDto>(
             `${environment.urlApi}/${this.urlGetAll}`
+        )
+    }
+    public getRoomById(roomId: string) : Observable<ResponseDto> {
+        return this.http.get<ResponseDto>(
+            `${environment.urlApi}/${this.urlGetById}?id=${roomId}`
+        )
+    }
+
+    public updateRoomStatus(roomUpdateDto: RoomUpdateDto) : Observable<ResponseDto> {
+        return this.http.post<ResponseDto>(
+            `${environment.urlApi}/${this.urlUpdateStatus}`, roomUpdateDto
         )
     }
 }

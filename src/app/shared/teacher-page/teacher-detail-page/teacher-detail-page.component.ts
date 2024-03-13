@@ -7,6 +7,7 @@ import { ResponseDto } from 'src/app/core/models/reponseDto';
 import { Teacher } from 'src/app/core/models/teacherDto/teacher';
 import { TeacherService } from 'src/app/core/services/teacher.service';
 import { TeacherUpdateDto } from 'src/app/core/models/teacherDto/teacherUpdateDto';
+import { ChangePasswordDto } from 'src/app/core/models/changePasswordDto';
 
 @Component({
   selector: 'app-teacher-detail-page',
@@ -17,6 +18,7 @@ export class TeacherDetailPageComponent implements OnInit{
   teacherId: string = '';
   teacher: Teacher = {} as Teacher;
   messageUpdate = '';
+  messageChangePassword = '';
   constructor(
     private router: Router,
     private teacherService: TeacherService,
@@ -62,9 +64,25 @@ export class TeacherDetailPageComponent implements OnInit{
     teacherUpdateDto.status = 1;
     this.teacherService.updateTeacher(this.teacher.id, teacherUpdateDto).subscribe((res: ResponseDto) => {
       if(res.isSuccess) {
-        location.reload();
+        this.messageUpdate = "Update success";
       } else {
         this.messageUpdate = "Please reload and try again!";
+      }
+    })
+  }
+  changePasswordForm = this.formBuilder.group({
+    currentPassword: new FormControl('', [Validators.required]),
+    newPassword: new FormControl('', [Validators.required])
+  })
+  public changePassword() {
+    const changePasswordDto : ChangePasswordDto = {} as ChangePasswordDto;
+    changePasswordDto.currentPassword = this.changePasswordForm.controls.currentPassword.value || '';
+    changePasswordDto.newPassword = this.changePasswordForm.controls.newPassword.value || '';
+    this.teacherService.changePassword(this.teacherId, changePasswordDto).subscribe((res: ResponseDto) => {
+      if(res.isSuccess) {
+        this.messageChangePassword = 'Change success';
+      } else {
+        this.messageChangePassword = 'Please check double check information and try again';
       }
     })
   }

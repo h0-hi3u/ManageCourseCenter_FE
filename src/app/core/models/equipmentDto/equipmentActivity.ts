@@ -1,6 +1,6 @@
 import { Equipment } from "./equipment";
 import { Manager } from "../managerDto/manager";
-import { Room } from "../room";
+import { Room } from "../roomDto/room";
 
 export interface EquipmentActivity {
     id: number;

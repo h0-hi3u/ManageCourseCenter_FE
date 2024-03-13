@@ -1,0 +1,54 @@
+<div class="container">
+    <h1>Room Detail</h1>
+    <div *ngIf="messageUpdate != ''" style="text-align: center; color: red; font-size: 18px; font-weight: 700;">{{messageUpdate}}</div>
+    <form method="post">
+        <div class="form-group">
+            <label for="roomno">Room No</label>
+            <input type="text" id="roomno" name="roomno" value="{{room.roomNo}}" required>
+        </div>
+        <div class="form-group">
+            <label for="floor">Floor</label>
+            <input type="number" id="floor" name="floor" class="date-input" value="{{room.floor}}" required>
+        </div>
+        <div class="form-group">
+            <label for="status">Status</label>
+            <select name="status" id="status" required>
+                <option value="free">Free</option>
+                <option value="using">Using</option>
+                <option value="maintaining">Maintaining</option>
+            </select>
+        </div>
+    </form>
+    <div class="add-new-container">
+        <div class="header">Room's Equipment List</div>
+    </div>
+    <!-- <div class="search-filter-container">
+        <div class="search-container">
+            <input type="text" placeholder="Search...">
+            <button class="search-button">Search</button>
+        </div>
+    </div> -->
+
+    <table class="equipment-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <!-- <th>Action</th> -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let equip of listEquip">
+                <td>{{equip.name}}</td>
+                <td>{{equip.type}}</td>
+                <!-- <td>
+                    <a href="#">Detail</a>
+                </td> -->
+            </tr>
+        </tbody>
+    </table>
+    <div class="btn-container">
+        <a href="/staff/room" class="btnClose">Close</a>
+        <button type="submit">Update</button>
+    </div>
+</div>

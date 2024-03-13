@@ -384,25 +384,31 @@ tr:hover {
 }
 
 .activity-table th:first-child,
-.activity-table td:first-child,
-.activity-table th:nth-child(2),
-.activity-table td:nth-child(2),
-.activity-table th:nth-child(4),
-.activity-table td:nth-child(4) {
-    width: 25%;
-}
-
-.activity-table th:last-child,
-.activity-table td:last-child,
-.activity-table th:nth-child(5),
-.activity-table td:nth-child(5) {
-    width: 10%;
-}
-
-.activity-table th:nth-child(3),
-.activity-table td:nth-child(3) {
+.activity-table td:first-child{
     width: 15%;
 }
+.activity-table th:nth-child(2),
+.activity-table td:nth-child(2){
+    width: 15%;
+}
+.activity-table th:nth-child(3),
+.activity-table td:nth-child(3) {
+    width: 10%;
+}
+.activity-table th:nth-child(4),
+.activity-table td:nth-child(4) {
+    width: 15%;
+}
+.activity-table th:nth-child(5),
+.activity-table td:nth-child(5) {
+    width: 5%;
+}
+.activity-table th:last-child,
+.activity-table td:last-child {
+    width: 40%;
+}
+
+
 
 .equipment-table th:first-child,
 .equipment-table td:first-child {
@@ -419,4 +425,55 @@ tr:hover {
 .equipment-table th:nth-child(2),
 .equipment-table td:nth-child(2) {
     width: 30%;
+}
+#pagination {
+    /* mt-5 h-8 border border-gray-400 float-right */
+    margin-top: 20px;
+    height: 32px;
+    /* border: 1px gray solid; */
+    float: right;
+}
+#list-ul {
+    /* flex h-full w-full */
+    display: flex;
+    height: 100%;
+    width: 100%;
+    /* list-style-type: none; */
+    /* display: inline-flex; */
+}
+.list-li {
+    /* w-8 h-full border-x text-ellipsis border-x-gray-400 flex justify-center items-center text-blue-400 */
+    cursor: pointer;
+    display: flex;
+    width: 32px;
+    border: 1px gray solid;
+    justify-content: center;
+    align-items: center;
+}
+.list-li:hover {
+    background-color: gray;
+    color: white;
+}
+.icon-page {
+    /* w-full h-full cursor-pointer flex justify-center items-center text-[10px] */
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+}
+.button-move-page {
+    /* w-full h-full flex justify-center items-center text-[14px] */
+    border: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+.button-move-page:hover {
+    background-color: gray;
+    color: white;
 }

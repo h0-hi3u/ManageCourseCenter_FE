@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { EquipmentReport } from 'src/app/core/models/equipmentDto/equipmentReport';
 import { ResponseDto } from 'src/app/core/models/reponseDto';
+import { faAnglesLeft, faAnglesRight } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-teacher-report-page',
@@ -12,18 +13,38 @@ import { ResponseDto } from 'src/app/core/models/reponseDto';
 })
 export class TeacherReportPageComponent implements OnInit{
   listReport: EquipmentReport[] = [];
+  currentPageIndex = 1;
+  pageSize = 4;
+  faAnglesRight = faAnglesRight;
+  faAnglesLeft = faAnglesLeft;
+  arrayTotalPage: number[] = [];
   constructor(
     private reportService: ReportService,
     public helperDate: HelperDate,
     private router: Router
     ) {}
   ngOnInit(): void {
-    const teacherId = localStorage.getItem('teacherId');
-      this.reportService.getReportByTeacherId(parseInt(teacherId || '0'), 5, 1).subscribe((res: ResponseDto) => {
-        this.listReport = res.data.data;
-      })
+    this.movePage();
   }
   public goToCreateReport() {
     this.router.navigate(['teacher/create-report']);
   }
+  getArrayTotalPage(count: number) {
+    
+    const totalPage = Math.ceil(count/this.pageSize);
+    console.log(totalPage);
+    
+      for (let i = 1; i <= totalPage; i++) {
+        this.arrayTotalPage.push(i);
+      }
+    }
+    public movePage(currentPage?: number) {
+      this.currentPageIndex = currentPage || this.currentPageIndex;
+      this.arrayTotalPage = [];
+      const teacherId = localStorage.getItem('teacherId');
+      this.reportService.getReportByTeacherId(parseInt(teacherId || '0'), 5, this.currentPageIndex).subscribe((res: ResponseDto) => {
+        this.listReport = res.data.data;
+        this.getArrayTotalPage(res.data.totalRecords);
+      })
+    }
 }

@@ -6,6 +6,4 @@ export interface ManagerUpdateDto {
     phone: string;
     birthDay: Date;
     gender: number;
-    role: number;
-    status: number;
 }

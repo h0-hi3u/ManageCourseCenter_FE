@@ -9,7 +9,7 @@ export class HelperDate {
         const date = new Date(dateString);
         return this.datePipe.transform(date, 'dd-MM-yyyy') || 'Error date';
     }
-    public formatDateYearMonthDayDate(date: Date): string {
+    public formatDateYearMonthDayDate(date?: Date): string {
         return this.datePipe.transform(date, 'yyyy-MM-dd') || 'Error date';
     }
 }

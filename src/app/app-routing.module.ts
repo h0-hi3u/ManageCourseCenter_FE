@@ -56,6 +56,7 @@ import { StaffProfilePageComponent } from './shared/staff-page/staff-profile-pag
 import { ChildrenProfilePageComponent } from './shared/children-page/children-profile-page/children-profile-page.component';
 import { ChildrenTranscriptPageComponent } from './shared/children-page/children-transcript-page/children-transcript-page.component';
 import { ChildrenDetailTranscriptPageComponent } from './shared/children-page/children-detail-transcript-page/children-detail-transcript-page.component';
+import { StaffDetailRoomPageComponent } from './shared/staff-page/staff-detail-room-page/staff-detail-room-page.component';
 
 const routes: Routes = [
   {
@@ -137,7 +138,8 @@ const routes: Routes = [
       { path: 'room', component: StaffRoomPageComponent },
       { path: 'activity', component: StaffEquipmentActivityPageComponent},
       { path: 'equipment', component: StaffEquipmentPageComponent},
-      { path: 'profile', component: StaffProfilePageComponent}
+      { path: 'profile', component: StaffProfilePageComponent},
+      { path: 'detail-room/:id', component: StaffDetailRoomPageComponent}
     ],
   },
   {

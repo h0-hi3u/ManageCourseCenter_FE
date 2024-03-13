@@ -1,3 +1,4 @@
+import { HelperDate } from 'src/app/core/helpers/helperDate';
 import { StaffService } from './../../../core/services/staff.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
@@ -11,7 +12,7 @@ import { ResponseDto } from 'src/app/core/models/reponseDto';
 })
 export class ManageStaffPageComponent implements OnInit{
   listStaff: Manager[] = [];
-  constructor(private staffService : StaffService, private router : Router) {}
+  constructor(private staffService : StaffService, private router : Router, public helperDate: HelperDate) {}
   ngOnInit(): void {
     this.staffService.getAll().subscribe((res: ResponseDto) => {
       this.listStaff = res.data;
@@ -19,5 +20,25 @@ export class ManageStaffPageComponent implements OnInit{
   }
   public goToStaffDetail(staffId: number) {
     this.router.navigate([`/manager/staff-detail/${staffId}`]);
+  }
+  public setInactive(staffId: number) {
+    this.staffService.setStatusStaff(staffId, 2).subscribe((res: ResponseDto) => {
+      if(res.isSuccess) {
+        location.reload();
+      } else {
+        console.log("Set status staff fail!");
+        
+      }
+    })
+  }
+  public setActive(staffId: number) {
+    this.staffService.setStatusStaff(staffId, 1).subscribe((res: ResponseDto) => {
+      if(res.isSuccess) {
+        location.reload();
+      } else {
+        console.log("Set status staff fail!");
+        
+      }
+    })
   }
 }

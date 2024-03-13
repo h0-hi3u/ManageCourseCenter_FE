@@ -248,28 +248,33 @@ tr:hover {
     width: 10%;
 }
 
+
+.parent-children-table th:first-child,
+.parent-children-table td:first-child {
+    width: 19.5%;
+}
+.parent-children-table th:nth-child(2),
+.parent-children-table td:nth-child(2) {
+    width: 19.5%;
+}
+.parent-children-table th:nth-child(3),
+.parent-children-table td:nth-child(3) {
+    width: 19.5%;
+}
+.parent-children-table th:nth-child(4),
+.parent-children-table td:nth-child(4) {
+    width: 19.5%;
+}
+.parent-children-table th:nth-child(5),
+.parent-children-table td:nth-child(5){
+    width: 10%;
+}
 .parent-children-table th:last-child,
 .parent-children-table td:last-child {
     width: 12%;
 }
 
-.parent-children-table th:nth-child(5),
-.parent-children-table td:nth-child(5),
-.parent-children-table th:nth-child(6),
-.parent-children-table td:nth-child(6) {
-    width: 10%;
-}
 
-.parent-children-table th:first-child,
-.parent-children-table td:first-child,
-.parent-children-table th:nth-child(2),
-.parent-children-table td:nth-child(2),
-.parent-children-table th:nth-child(3),
-.parent-children-table td:nth-child(3),
-.parent-children-table th:nth-child(3),
-.parent-children-table td:nth-child(3) {
-    width: 19.5%;
-}
 
 .children-table th:last-child,
 .children-table td:last-child {

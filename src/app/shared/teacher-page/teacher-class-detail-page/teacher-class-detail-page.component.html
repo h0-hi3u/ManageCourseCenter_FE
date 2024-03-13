@@ -1,0 +1,101 @@
+<div class="container">
+    <h1>Class Detail</h1>
+    <form method="post">
+        <div class="form-group">
+            <label for="classname">Class Name</label>
+            <input type="text" id="classname" name="classname" value="{{class.name}}" readonly>
+        </div>
+        <div class="form-group">
+            <label for="coursename">Course Name</label>
+            <input list="coursesname" id="coursename" name="coursename" value="{{class.course.name}}" readonly>
+            <!-- <div>{{class.course.name || ''}}</div> -->
+        </div>
+        <div class="form-group">
+            <label for="teachersname">Teacher Name</label>
+            <input list="teachersname" id="teachername" name="teachername" value="{{class.teacher.fullName}}"
+                readonly>
+        </div>
+        <div class="form-group">
+            <label for="startdate">Start Date</label>
+            <input type="date" id="startdate" name="startdate" class="date-input" value="{{helperDate.formatDateYearMonthDayDate(class.startDate)}}"
+                readonly required>
+        </div>
+        <div class="form-group">
+            <label for="enddate">End Date</label>
+            <input type="date" id="enddate" name="enddate" class="date-input" value="{{helperDate.formatDateYearMonthDayDate(class.endDate)}}" readonly
+                required>
+        </div>
+        <div class="form-group">
+            <label for="amount">Max Amount</label>
+            <input type="number" id="amount" name="amount" value="{{class.totalAmount}}" readonly>
+        </div>
+        <!-- <div class="form-group">
+            <label for="dayweek">Day In Week</label>
+            <div class="checkbox-group">
+                <input type="checkbox" id="monday" name="day" value="Monday">
+                <section for="monday">Monday</section>
+
+                <input type="checkbox" id="tuesday" name="day" value="Tuesday">
+                <section for="tuesday">Tuesday</section>
+
+                <input type="checkbox" id="wednesday" name="day" value="Wednesday">
+                <section for="wednesday">Wednesday</section>
+
+                <input type="checkbox" id="thursday" name="day" value="Thursday">
+                <section for="thursday">Thursday</section>
+
+                <input type="checkbox" id="friday" name="day" value="Friday">
+                <section for="friday">Friday</section>
+
+                <input type="checkbox" id="saturday" name="day" value="Saturday">
+                <section for="saturday">Saturday</section>
+
+                <input type="checkbox" id="sunday" name="day" value="Sunday">
+                <section for="sunday">Sunday</section>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="starttime">Start Time</label>
+            <input type="text" id="starttime" name="starttime" pattern="([01]?[0-9]|2[0-3]):[0-5][0-9]"
+                value="{{class.classTimes[0]}}" required>
+        </div>
+        <div class="form-group">
+            <label for="endtime">End Time</label>
+            <input type="text" id="endtime" name="endtime" pattern="([01]?[0-9]|2[0-3]):[0-5][0-9]" value="hh:mm"
+                required>
+        </div> -->
+    </form>
+    <!-- <div class="add-new-container">
+        <div class="header">Class's Student List</div>
+    </div>
+    <div class="search-filter-container">
+        <div class="search-container">
+            <input type="text" placeholder="Search...">
+            <button class="search-button">Search</button>
+        </div>
+    </div>
+
+    <table class="children-table">
+        <thead>
+            <tr>
+                <th>Student Name</th>
+                <th>Gender</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>S Name</td>
+                <td>Gender</td>
+                <td> 
+                    <a href="#">Detail</a> |
+                    <a href="#">Suspend</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="btn-container">
+        <a href="/teacher" class="btnClose">Close</a>
+        <button type="submit">Update</button>
+    </div> -->
+</div>

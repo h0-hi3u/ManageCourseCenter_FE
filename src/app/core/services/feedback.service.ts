@@ -10,6 +10,7 @@ import { environment } from "src/environment/environment";
 export class FeedbackService {
     private readonly urlGetFeedbackByTeacherId = 'Feedback/get-feedback-by-teacher-id';
     private readonly urlGetFeedbackByChildrenId = 'Feedback/get-by-childrenId';
+    private readonly urlGetFeedbackByParentId = 'Feedback/getAllFeedbackByParentId';
     constructor(private http : HttpClient) {}
     public getFeedbackByTeacherId(teacherId: number, pageSize: number, pageIndex: number) : Observable<ResponseDto> {
         return this.http.get<ResponseDto>(
@@ -19,6 +20,11 @@ export class FeedbackService {
     public getFeedbackByChildrenId(childrenId: string) : Observable<ResponseDto> {
         return this.http.get<ResponseDto>(
             `${environment.urlApi}/${this.urlGetFeedbackByChildrenId}?childrenId=${childrenId}`
+        )
+    }
+    public getFeedbackByParentId(parentId: number, pageSize: number, pageIndex: number) : Observable<ResponseDto> {
+        return this.http.get<ResponseDto>(
+            `${environment.urlApi}/${this.urlGetFeedbackByParentId}?parentId=${parentId}&pageSize=${pageSize}&pageIndex=${pageIndex}`
         )
     }
 }

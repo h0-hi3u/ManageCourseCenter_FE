@@ -1,6 +1,6 @@
 import { HelperDate } from './../../../core/helpers/helperDate';
 import { Component, OnInit } from '@angular/core';
-import { Children } from 'src/app/core/models/children';
+import { Children } from 'src/app/core/models/childrenDto/children';
 import { ResponseDto } from 'src/app/core/models/reponseDto';
 import { ChildrenService } from 'src/app/core/services/children.service';
 

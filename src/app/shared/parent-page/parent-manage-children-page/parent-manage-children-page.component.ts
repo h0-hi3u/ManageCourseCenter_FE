@@ -1,5 +1,5 @@
 import { HelperDate } from 'src/app/core/helpers/helperDate';
-import { Children } from 'src/app/core/models/children';
+import { Children } from 'src/app/core/models/childrenDto/children';
 import { ParentService } from './../../../core/services/parent.service';
 import { Component, OnInit } from '@angular/core';
 import { ResponseDto } from 'src/app/core/models/reponseDto';

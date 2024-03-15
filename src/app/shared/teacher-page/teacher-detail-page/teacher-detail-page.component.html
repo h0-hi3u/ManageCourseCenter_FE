@@ -20,7 +20,7 @@
             </div>
             <div class="form-group">
                 <label for="birth">Birth Day</label>
-                <input type="date" id="birth" name="birth" formControlName="birthDay" [ngClass]="{'invalid' : updateTeacherForm.get('birthDay')?.invalid && updateTeacherForm.get('birthDay')?.touched}">
+                <input type="date" id="birth" name="birth" min="1950-01-01" max="2006-01-01" formControlName="birthDay" [ngClass]="{'invalid' : updateTeacherForm.get('birthDay')?.invalid && updateTeacherForm.get('birthDay')?.touched}">
             </div>
             <div class="form-group">
                 <label for="gender">Gender</label>

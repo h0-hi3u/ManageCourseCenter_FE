@@ -19,7 +19,7 @@ export class LoginPageComponent {
   loginForm = this.formBuilder.group({
     email: new FormControl('', [Validators.required, Validators.email]),
     password: new FormControl('', [Validators.required]),
-    role: new FormControl('manager'),
+    role: new FormControl('children'),
   });
   get getForm() {
     return this.loginForm.controls;

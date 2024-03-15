@@ -46,9 +46,9 @@
                 <td>{{helperDate.formatDateYearMonthDayDate(report.sendTime)}}</td>
                 <td *ngIf="report.closeTime">{{helperDate.formatDateYearMonthDayDate(report.closeTime)}}</td>
                 <td *ngIf="!report.closeTime">Maintaining</td>
-                <td *ngIf="report.status == 1">Opening</td>
-                <td *ngIf="report.status == 2">Closed</td>
-                <td *ngIf="report.status == 3">Deleted</td>
+                <td *ngIf="report.status == 1" style="color: red;">Opening</td>
+                <td *ngIf="report.status == 2" style="color: green;">Closed</td>
+                <td *ngIf="report.status == 3" style="color: yellow;">Deleted</td>
                 <td>{{report.description}}</td>
             </tr>
         </tbody>

@@ -1,7 +1,7 @@
-import { AcademicTranscript } from "./academicTranscript";
-import { CartItem } from "./cartItem";
-import { ChildrenClass } from "./childrenClass";
-import { Parent } from "./parentDto/parent";
+import { AcademicTranscript } from "../academicTranscript";
+import { CartItem } from "../cartItem";
+import { ChildrenClass } from "../childrenClass";
+import { Parent } from "../parentDto/parent";
 
 export interface Children {
     id: number;

@@ -1,5 +1,5 @@
 import { Cart } from "./cart";
-import { Children } from "./children";
+import { Children } from "./childrenDto/children";
 import { Class } from "./class";
 import { Course } from "./coures";
 

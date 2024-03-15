@@ -1,7 +1,7 @@
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
 import { ChildrenService } from './../../../core/services/children.service';
 import { Component, OnInit } from '@angular/core';
-import { Children } from 'src/app/core/models/children';
+import { Children } from 'src/app/core/models/childrenDto/children';
 import { HelperDate } from 'src/app/core/helpers/helperDate';
 import { HelperValidate } from 'src/app/core/helpers/helperValidate';
 import { ResponseDto } from 'src/app/core/models/reponseDto';

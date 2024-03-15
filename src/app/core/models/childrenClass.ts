@@ -1,4 +1,4 @@
-import { Children } from "./children";
+import { Children } from "./childrenDto/children";
 import { Class } from "./class";
 import { Feedback } from "./feedbackDto/feedback";
 import { Schedule } from "./schedule";

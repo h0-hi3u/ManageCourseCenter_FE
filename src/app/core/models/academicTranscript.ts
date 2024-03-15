@@ -1,4 +1,4 @@
-import { Children } from "./children";
+import { Children } from "./childrenDto/children";
 import { Course } from "./coures";
 import { Teacher } from "./teacherDto/teacher";
 

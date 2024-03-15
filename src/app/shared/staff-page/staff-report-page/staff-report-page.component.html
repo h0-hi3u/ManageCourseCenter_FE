@@ -48,9 +48,9 @@
                 <td *ngIf="report.closeTime">{{helperDate.formatDateYearMonthDayDate(report.closeTime)}}</td>
                 <td *ngIf="!report.closeTime">Maintaining</td>
                 <td>{{report.description}}</td>
-                <td *ngIf="report.status == 1">Open</td>
-                <td *ngIf="report.status == 2">Close</td>
-                <td *ngIf="report.status == 3">Delete</td>
+                <td *ngIf="report.status == 1" style="color: red;">Open</td>
+                <td *ngIf="report.status == 2" style="color: green;">Close</td>
+                <td *ngIf="report.status == 3" style="color: yellow;">Delete</td>
                 <td *ngIf="report.status == 1" (click)="closeReport(report.id)"><button class="btn-solve" style="border: none;">Solved</button></td>
                 <td *ngIf="report.status != 1">None</td>
             </tr>

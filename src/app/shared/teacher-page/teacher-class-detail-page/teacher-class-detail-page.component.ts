@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { Class } from 'src/app/core/models/class';
 import { ResponseDto } from 'src/app/core/models/reponseDto';
 import { ClassService } from 'src/app/core/services/class.service';
-import { Children } from 'src/app/core/models/children';
+import { Children } from 'src/app/core/models/childrenDto/children';
 
 @Component({
   selector: 'app-teacher-class-detail-page',

@@ -4,6 +4,8 @@ import { EquipmentReport } from "./equipmentReport";
 export interface Equipment {
     id: number;
     name: string;
+    supplier: string;
+    quantity: number;
     description: string;
     type: number;
     status: number;

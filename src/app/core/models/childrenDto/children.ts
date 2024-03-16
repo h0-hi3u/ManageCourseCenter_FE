@@ -9,6 +9,7 @@ export interface Children {
     fullName: string;
     username: string;
     password: string;
+    imgUrl: string;
     birthDay: Date;
     gender: number;
     role: number;

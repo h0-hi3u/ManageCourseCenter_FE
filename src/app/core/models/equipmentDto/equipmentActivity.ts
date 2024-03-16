@@ -11,6 +11,7 @@ export interface EquipmentActivity {
     finishedTime: Date;
     description: string;
     action: number;
+    status: number;
 
     equipment: Equipment;
     manager: Manager;

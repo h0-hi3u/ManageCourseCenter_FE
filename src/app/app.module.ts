@@ -67,6 +67,7 @@ import { ChildrenDetailTranscriptPageComponent } from './shared/children-page/ch
 import { StaffDetailRoomPageComponent } from './shared/staff-page/staff-detail-room-page/staff-detail-room-page.component';
 import { TeacherClassDetailPageComponent } from './shared/teacher-page/teacher-class-detail-page/teacher-class-detail-page.component';
 import { ParentProfilePageComponent } from './shared/parent-page/parent-profile-page/parent-profile-page.component';
+import { ParentUpdateChildrenPageComponent } from './shared/parent-page/parent-update-children-page/parent-update-children-page.component';
 
 @NgModule({
   declarations: [
@@ -131,6 +132,7 @@ import { ParentProfilePageComponent } from './shared/parent-page/parent-profile-
     StaffDetailRoomPageComponent,
     TeacherClassDetailPageComponent,
     ParentProfilePageComponent,
+    ParentUpdateChildrenPageComponent,
   ],
   imports: [
     BrowserModule,

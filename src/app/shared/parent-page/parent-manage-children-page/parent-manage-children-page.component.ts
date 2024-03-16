@@ -13,7 +13,10 @@ import { Router } from '@angular/router';
 export class ParentManageChildrenPageComponent implements OnInit {
   parentId: string = '';
   listChildren: Children[] = [];
-  constructor(private parentService: ParentService, private router: Router, public helperDate: HelperDate) {}
+  constructor(
+    private parentService: ParentService,
+     private router: Router,
+      public helperDate: HelperDate) {}
   ngOnInit(): void {
       this.parentId = localStorage.getItem('parentId') || '';
       this.parentService.getChildrenByParenId(this.parentId).subscribe((res : ResponseDto) => {
@@ -22,5 +25,8 @@ export class ParentManageChildrenPageComponent implements OnInit {
   }
   public goToCreateChild() {
     this.router.navigate(['/parent/create-children']);
+  }
+  public goToProfileChildren(childrenId: number) {
+    this.router.navigate([`/parent/children-profile/${childrenId}`])
   }
 }

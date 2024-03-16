@@ -36,23 +36,23 @@
                 <th>Birth Date</th>
                 <th>Gender</th>
                 <th>Status</th>
-                <!-- <th>Action</th> -->
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let child of listChildren">
                 <td>{{child.fullName}}</td>
                 <td>{{child.username}}</td>
-                <td>{{child.password}}</td>
+                <td>password</td>
                 <td>{{helperDate.formatDateYearMonthDayDate(child.birthDay)}}</td>
                 <td *ngIf="child.gender == 1">Male</td>
                 <td *ngIf="child.gender == 2">Female</td>
                 <td *ngIf="child.status == 1">Active</td>
                 <td *ngIf="child.status == 2">Inactive</td>
-                <!-- <td>
-                    <a style="padding-right: 10px;" href="#">Detail</a>
-                    <a style="padding-left: 10px; border-left: 1px black solid; " href="#">Inactivate</a>
-                </td> -->
+                <td>
+                    <button style="padding-right: 10px; border: none; background-color: transparent; color: #007bff;" (click)="goToProfileChildren(child.id)">Detail</button>
+                    <!-- <a style="padding-left: 10px; border-left: 1px black solid; " href="#">Inactivate</a> -->
+                </td>
             </tr>
         </tbody>
     </table>

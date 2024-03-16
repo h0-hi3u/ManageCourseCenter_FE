@@ -15,7 +15,8 @@ export class LoginPageComponent {
     private authService: AuthService,
     private router: Router
   ) {}
-  messageLogin: string = '';
+  messageLoginSuccess: string = '';
+  messageLoginFail: string = '';
   loginForm = this.formBuilder.group({
     email: new FormControl('', [Validators.required, Validators.email]),
     password: new FormControl('', [Validators.required]),
@@ -36,7 +37,7 @@ export class LoginPageComponent {
             localStorage.setItem('childrenId', res.data.id);
             this.router.navigate(['/children']);
           } else {
-            this.messageLogin = 'Incorrect password or email!';
+            this.messageLoginFail = 'Incorrect password or email!';
           }
         });
     } else if (this.getForm.role.value == 'manager') {
@@ -50,7 +51,7 @@ export class LoginPageComponent {
             localStorage.setItem('managerId', res.data.id);
             this.router.navigate(['/manager']);
           } else {
-            this.messageLogin = 'Incorrect password or email!';
+            this.messageLoginFail = 'Incorrect password or email!';
           }
         });
     } else if (this.getForm.role.value == 'admin') {
@@ -64,7 +65,7 @@ export class LoginPageComponent {
             localStorage.setItem('adminId', res.data.id);
             this.router.navigate(['/admin']);
           } else {
-            this.messageLogin = 'Incorrect password or email!';
+            this.messageLoginFail = 'Incorrect password or email!';
           }
         });
     } else if (this.getForm.role.value == 'staff') {
@@ -78,7 +79,7 @@ export class LoginPageComponent {
             localStorage.setItem('staffId', res.data.id);
             this.router.navigate(['/staff']);
           } else {
-            this.messageLogin = 'Incorrect password or email!';
+            this.messageLoginFail = 'Incorrect password or email!';
           }
         });
     } else if (this.getForm.role.value == 'teacher') {
@@ -92,7 +93,7 @@ export class LoginPageComponent {
             localStorage.setItem('teacherId', res.data.id);
             this.router.navigate(['/teacher']);
           } else {
-            this.messageLogin = 'Incorrect password or email!';
+            this.messageLoginFail = 'Incorrect password or email!';
           }
         });
     } else if (this.getForm.role.value == 'parent') {
@@ -106,7 +107,7 @@ export class LoginPageComponent {
             localStorage.setItem('parentId', res.data.id);
             this.router.navigate(['/parent']);
           } else {
-            this.messageLogin = 'Incorrect password or email!';
+            this.messageLoginFail = 'Incorrect password or email!';
           }
         });
     }

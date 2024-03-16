@@ -12,7 +12,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./register-page.component.css']
 })
 export class RegisterPageComponent {
-  messageCreate = '';
+  messageCreateSuccess = '';
+  messageCreateFail = '';
     constructor(
       private formBuilder: FormBuilder,
        private helperValidate: HelperValidate,
@@ -46,9 +47,9 @@ export class RegisterPageComponent {
       
       this.parentService.createParent(parentCreateDto).subscribe((res: ResponseDto) => {
         if(res.isSuccess) {
-          this.messageCreate = 'Register success. Please go to login!';
+          this.messageCreateSuccess = 'Register success. Please go to login!';
         } else {
-          this.messageCreate = 'Some wrong. Please try again!';
+          this.messageCreateFail = 'Some wrong. Please try again!';
         }
       })
     }

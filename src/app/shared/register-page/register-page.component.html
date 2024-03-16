@@ -6,7 +6,8 @@ align-items: center;">
     <div class="login-box">
         <div class="login-header">
             <header>Create An Account</header>
-            <div *ngIf="messageCreate != ''" style="color: red; font-size: 18px; font-weight: 700;">{{messageCreate}}</div>
+            <div *ngIf="messageCreateFail != ''" style="color: red; font-size: 18px; font-weight: 700;">{{messageCreateFail}}</div>
+            <div *ngIf="messageCreateSuccess != ''" style="color: green; font-size: 18px; font-weight: 700;">{{messageCreateSuccess}}</div>
         </div>
         <form [formGroup]="registerForm" (ngSubmit)="register()">
             <div class="input-box">

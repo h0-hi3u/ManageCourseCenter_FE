@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 45%;
+    /* margin: 50px auto; */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+h1 {
+    text-align: center;
+    /* margin-bottom: 30px; */
+}
+.ban {
+    cursor: no-drop;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+/* .form-group .invalid {
+    border: 1px red solid;
+} */
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.invalid {
+    border: 1px red solid !important;
+}
+button {
+    display: block;
+    /* width: 15%; */
+    margin: 0 auto;
+    /* margin-left: 85%; */
+    /* padding: 10px; */
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.profile-container {
+    position: relative;
+    display: inline-block;
+    /* margin-bottom: 20px; */
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+#profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    object-fit: cover;
+}
+
+.course-table th:first-child,
+.course-table td:first-child,
+.course-table th:nth-child(2),
+.course-table td:nth-child(2),
+.course-table th:last-child,
+.course-table td:last-child {
+    width: 33%;
+}
+.rating-stars {
+    display: flex;
+    margin-left: 20px;
+}
+
+.rating-stars input[type="radio"] {
+    display: none;
+}
+
+.rating-stars label {
+    font-size: 30px;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.3s;
+    margin-right: 5px;
+}
+
+.rating-stars input[type="radio"]:checked~label {
+    color: #f39c12;
+}
+
+.rating-stars input[name="rating_course"]:checked~label {
+    color: #f39c12;
+}
+
+.rating-stars input[name="rating_teacher"]:checked~label {
+    color: #f39c12;
+}
+
+.rating-stars input[name="rating_equipment"]:checked~label {
+    color: #f39c12;
+}

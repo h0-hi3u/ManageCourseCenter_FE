@@ -1,0 +1,62 @@
+<div class="container">
+    <div class="add-new-container">
+        <div class="header">Parent Course</div>
+        <!-- <section>
+            <button class="add-button">Add New</button>
+            <button class="export-button">Export</button>
+        </section> -->
+    </div>
+    <div class="search-filter-container">
+        <div class="search-container">
+            <input type="text" placeholder="Search...">
+            <button class="search-button">Search</button>
+        </div>
+        <!-- <div class="filter-container">
+            <select>
+                <option value="coursename">Course Name</option>
+                <option value="opentime">Open Form Time</option>
+                <option value="closetime">Close Form Time</option>
+                <option value="price">Price</option>
+                <option value="role">Level</option>
+                <option value="status">Status</option>
+            </select>
+            <select>
+                <option value="all">Default</option>
+                <option value="active">Inscreasing</option>
+                <option value="inactive">Descreasing</option>
+            </select>
+            <button class="filter-button">Filter</button>
+        </div> -->
+    </div>
+
+    <table class="course-table">
+        <thead>
+            <tr>
+                <th>Course Name</th>
+                <th>Open Form Time</th>
+                <th>Close Form Time</th>
+                <th>Price</th>
+                <th>Level</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let course of listCourse">
+                <td>{{course.name}}</td>
+                <td>{{helperDate.formatDateYearMonthDayDate(course.openFormTime)}}</td>
+                <td>{{helperDate.formatDateYearMonthDayDate(course.closeFormTime)}}</td>
+                <td>${{course.price}}</td>
+                <td>Beginner</td>
+                <td *ngIf="course.status == 1">Upcoming</td>
+                <td *ngIf="course.status == 2">Opening</td>
+                <td *ngIf="course.status == 3">Closes</td>
+                <td *ngIf="course.status == 4">Ongoing</td>
+                <td *ngIf="course.status == 5">Ended</td>
+                <td>
+                    <button (click)="goToCourseDetail(course.id)" style="padding-right: 10px; border: none; background-color: transparent; color: #1154b6;">Detail</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -12,4 +12,7 @@ export class HelperDate {
     public formatDateYearMonthDayDate(date?: Date): string {
         return this.datePipe.transform(date, 'yyyy-MM-dd') || 'Error date';
     }
+    public formatDateYearMonthDayDateddMMyyyy(date?: Date): string {
+        return this.datePipe.transform(date, 'dd-MM-yy') || 'Error date';
+    }
 }

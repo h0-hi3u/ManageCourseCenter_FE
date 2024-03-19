@@ -1,18 +1,19 @@
 <div class="container">
     <h1>Feedback</h1>
-    <form method="post">
+    <div *ngIf="messageCreateFail != ''" style="text-align: center; color: red; font-size: 18px; font-weight: 700;">{{messageCreateFail}}</div>
+    <form [formGroup]="createFeedbackForm" (ngSubmit)="submitFeedback()">
         <div class="form-group">
             <label for="ratingcourse">Rating Course</label>
             <div class="rating-stars">
-                <input type="radio" id="course_star5" name="rating_course" value="5"><label
+                <input type="radio" id="course_star5" name="ratingCourse" value="5" formControlName="ratingCourse"><label
                     for="course_star5">&#9733;</label>
-                <input type="radio" id="course_star4" name="rating_course" value="4"><label
+                <input type="radio" id="course_star4" name="ratingCourse" value="4" formControlName="ratingCourse"><label
                     for="course_star4">&#9733;</label>
-                <input type="radio" id="course_star3" name="rating_course" value="3"><label
+                <input type="radio" id="course_star3" name="ratingCourse" value="3" formControlName="ratingCourse"><label
                     for="course_star3">&#9733;</label>
-                <input type="radio" id="course_star2" name="rating_course" value="2"><label
+                <input type="radio" id="course_star2" name="ratingCourse" value="2" formControlName="ratingCourse"><label
                     for="course_star2">&#9733;</label>
-                <input type="radio" id="course_star1" name="rating_course" value="1"><label
+                <input type="radio" id="course_star1" name="ratingCourse" value="1" formControlName="ratingCourse"><label
                     for="course_star1">&#9733;</label>
             </div>
         </div>
@@ -20,15 +21,15 @@
         <div class="form-group">
             <label for="ratingteacher">Rating Teacher</label>
             <div class="rating-stars">
-                <input type="radio" id="teacher_star5" name="rating_teacher" value="5"><label
+                <input type="radio" id="teacher_star5" name="ratingTeacher" value="5" formControlName="ratingTeacher"><label
                     for="teacher_star5">&#9733;</label>
-                <input type="radio" id="teacher_star4" name="rating_teacher" value="4"><label
+                <input type="radio" id="teacher_star4" name="ratingTeacher" value="4" formControlName="ratingTeacher"><label
                     for="teacher_star4">&#9733;</label>
-                <input type="radio" id="teacher_star3" name="rating_teacher" value="3"><label
+                <input type="radio" id="teacher_star3" name="ratingTeacher" value="3" formControlName="ratingTeacher"><label
                     for="teacher_star3">&#9733;</label>
-                <input type="radio" id="teacher_star2" name="rating_teacher" value="2"><label
+                <input type="radio" id="teacher_star2" name="ratingTeacher" value="2" formControlName="ratingTeacher"><label
                     for="teacher_star2">&#9733;</label>
-                <input type="radio" id="teacher_star1" name="rating_teacher" value="1"><label
+                <input type="radio" id="teacher_star1" name="ratingTeacher" value="1" formControlName="ratingTeacher"><label
                     for="teacher_star1">&#9733;</label>
             </div>
         </div>
@@ -36,26 +37,26 @@
         <div class="form-group">
             <label for="ratingequipment">Rating Equipment</label>
             <div class="rating-stars">
-                <input type="radio" id="equipment_star5" name="rating_equipment" value="5"><label
+                <input type="radio" id="equipment_star5" name="ratingEquipment" value="5" formControlName="ratingEquipment"><label
                     for="equipment_star5">&#9733;</label>
-                <input type="radio" id="equipment_star4" name="rating_equipment" value="4"><label
+                <input type="radio" id="equipment_star4" name="ratingEquipment" value="4" formControlName="ratingEquipment"><label
                     for="equipment_star4">&#9733;</label>
-                <input type="radio" id="equipment_star3" name="rating_equipment" value="3"><label
+                <input type="radio" id="equipment_star3" name="ratingEquipment" value="3" formControlName="ratingEquipment"><label
                     for="equipment_star3">&#9733;</label>
-                <input type="radio" id="equipment_star2" name="rating_equipment" value="2"><label
+                <input type="radio" id="equipment_star2" name="ratingEquipment" value="2" formControlName="ratingEquipment"><label
                     for="equipment_star2">&#9733;</label>
-                <input type="radio" id="equipment_star1" name="rating_equipment" value="1"><label
+                <input type="radio" id="equipment_star1" name="ratingEquipment" value="1" formControlName="ratingEquipment"><label
                     for="equipment_star1">&#9733;</label>
             </div>
         </div>
 
         <div class="form-group">
             <label for="description">Description</label>
-            <input type="text" id="description" name="description" placeholder="Description">
+            <input type="text" id="description" name="description" placeholder="Description" formControlName="description"  [ngClass]="{'invalid' : createFeedbackForm.get('description')?.invalid && createFeedbackForm.get('description')?.touched}">
         </div>
         <div class="btn-container">
-            <a href="#" class="btnClose">Close</a>
-            <button type="submit">Add</button>
+            <a href="/children" class="btnClose">Close</a>
+            <button type="submit" [disabled]="createFeedbackForm.invalid">Add</button>
         </div>
     </form>
 </div>

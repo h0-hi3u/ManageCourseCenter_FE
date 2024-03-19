@@ -30,6 +30,10 @@
             <div class="form-group">
                 <span style="font-weight: 700; font-size: 18px;">Total slot: </span><span>{{course.totalSlot}}</span>
             </div>
+            <select style="margin-bottom: 20px;">
+                <option selected hidden>Choose children</option>
+                <option value="{{child.id}}" *ngFor="let child of listChild">{{child.fullName}}</option>
+            </select>
             <button style="padding: 5px 10px; text-align: center;" [disabled]="isDisable" [ngClass]="{'ban': isDisable}">Register</button>
         </div>
     </div>

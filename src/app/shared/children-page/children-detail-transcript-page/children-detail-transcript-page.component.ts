@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AcademicTranscript } from 'src/app/core/models/academicTranscript';
+import { AcademicTranscript } from 'src/app/core/models/academicTranscript/academicTranscript';
 import { ResponseDto } from 'src/app/core/models/reponseDto';
 import { AcademicTranscriptService } from 'src/app/core/services/academicTranscript.service';
 

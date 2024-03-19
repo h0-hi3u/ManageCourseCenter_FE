@@ -14,6 +14,7 @@ export class ChildrenService {
     private readonly urlGetById = 'Child/get-by-id';
     private readonly urlCreateChildren = 'Child/create-child';
     private readonly urlUpdateChildren = 'Child/update-child';
+    private readonly urlGetListNotEnrolled = 'Child/get-list-child-not-enrolled';
     constructor(private http: HttpClient) {}
     public getAll(): Observable<ResponseDto> {
         return this.http.get<ResponseDto>(
@@ -33,6 +34,11 @@ export class ChildrenService {
     public updateChildren(child: Children) : Observable<ResponseDto> {
         return this.http.put<ResponseDto>(
             `${environment.urlApi}/${this.urlUpdateChildren}`, child
+        )
+    }
+    public getNotEnrolled(parentId: string, courseId: string) : Observable<ResponseDto>{
+        return this.http.get<ResponseDto>(
+            `${environment.urlApi}/${this.urlGetListNotEnrolled}?parentId=${parentId}&courseId=${courseId}&pageSize=20&pageIndex=1`
         )
     }
 }

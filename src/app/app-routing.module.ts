@@ -82,7 +82,7 @@ const routes: Routes = [
       { path: '', component: ChildrenClassPageComponent },
       { path: 'feedback', component: ChildrenFeedbackPageComponent },
       {
-        path: 'create-feedback',
+        path: 'create-feedback/:id',
         component: ChildrenCreateFeedbackPageComponent,
       },
       { path: 'profile', component: ChildrenProfilePageComponent},

@@ -19,7 +19,9 @@ h1 {
     text-align: center;
     margin-bottom: 30px;
 }
-
+.invalid {
+    border: 1px red solid !important;
+}
 .form-group {
     margin-bottom: 20px;
 }

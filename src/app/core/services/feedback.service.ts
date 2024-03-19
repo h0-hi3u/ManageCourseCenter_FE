@@ -3,6 +3,7 @@ import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 import { ResponseDto } from "../models/reponseDto";
 import { environment } from "src/environment/environment";
+import { FeedbackCreateDto } from "../models/feedbackDto/feedbackCreateDto";
 
 @Injectable({
     providedIn: 'root'
@@ -12,6 +13,7 @@ export class FeedbackService {
     private readonly urlGetFeedbackByChildrenId = 'Feedback/get-by-childrenId';
     private readonly urlGetFeedbackByParentId = 'Feedback/getAllFeedbackByParentId';
     private readonly urlGetFeedbackByCourseId = 'Feedback/get-by-courseId';
+    private readonly urlCreateFeedback = 'Feedback/create-feedback';
     constructor(private http : HttpClient) {}
     public getFeedbackByTeacherId(teacherId: number, pageSize: number, pageIndex: number) : Observable<ResponseDto> {
         return this.http.get<ResponseDto>(
@@ -31,6 +33,11 @@ export class FeedbackService {
     public getFeedbackByCourseId(courseId: string) : Observable<ResponseDto> {
         return this.http.get<ResponseDto>(
             `${environment.urlApi}/${this.urlGetFeedbackByCourseId}?courseId=${courseId}`
+        )
+    }
+    public createFeedback(feedbackCreateDto: FeedbackCreateDto) : Observable<ResponseDto> {
+        return this.http.post<ResponseDto>(
+            `${environment.urlApi}/${this.urlCreateFeedback}`, feedbackCreateDto
         )
     }
 }

@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Class } from 'src/app/core/models/class';
 import { Component, OnInit } from '@angular/core';
 import { Feedback } from 'src/app/core/models/feedbackDto/feedback';
@@ -17,14 +18,12 @@ export class ChildrenClassPageComponent implements OnInit{
   faAnglesRight = faAnglesRight;
   faAnglesLeft = faAnglesLeft;
   arrayTotalPage: number[] = [];
-  constructor(private classService: ClassService) {}
+  constructor(private classService: ClassService, private router: Router) {}
   ngOnInit(): void {
       this.movePage();
   }
   getArrayTotalPage(count: number) {
   const totalPage = Math.ceil(count/this.pageSize);
-  console.log(totalPage);
-  
     for (let i = 1; i <= totalPage; i++) {
       this.arrayTotalPage.push(i);
     }
@@ -37,5 +36,8 @@ export class ChildrenClassPageComponent implements OnInit{
         this.listClass = res.data.data;
         this.getArrayTotalPage(res.data.totalRecords)
        });
+  }
+  public goToCreateFeedback(classId: number) {
+    this.router.navigate([`/children/create-feedback/${classId}`]);
   }
 }

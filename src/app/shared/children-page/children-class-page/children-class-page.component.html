@@ -29,7 +29,7 @@
                 <th>Course Name</th>
                 <th>Class Name</th>
                 <th>Teacher Name</th>
-                <!-- <th>Action</th> -->
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
@@ -37,16 +37,16 @@
                 <td>{{class.course.name}}</td>
                 <td>{{class.name}}</td>
                 <td>{{class.teacher.fullName}}</td>
-                <!-- <td>
-                    <a href="#" style="padding-right: 10px;">Detail</a>
-                     
-                    <a href="/children/create-feedback" style="padding-left: 10px; border-left: 1px black solid;">Feedback</a>
-                </td> -->
+                <td>
+                    <!-- <a href="#" style="padding-right: 10px;">Detail</a> -->
+                    <div *ngIf="class.status == 0" href="/children/create-feedback" style="padding-left: 10px;">None</div>
+                    <button *ngIf="class.status == 1" (click)="goToCreateFeedback(class.id)" style="padding-left: 10px; border: none; color: #007bff; background-color: transparent;">Feedback</button>
+                </td>
             </tr>
         </tbody>
     </table>
     <div id="pagination"
-    *ngIf="arrayTotalPage.length > 1">
+    *ngIf="listClass.length > 0">
     <ul class="list-ul" style="display: inline-flex;">
         <li (click)="movePage(currentPageIndex - 1)"
             *ngIf="currentPageIndex > 1"

@@ -1,4 +1,4 @@
-import { AcademicTranscript } from "../academicTranscript";
+import { AcademicTranscript } from "../academicTranscript/academicTranscript";
 import { Class } from "../class";
 import { Schedule } from "../schedule";
 

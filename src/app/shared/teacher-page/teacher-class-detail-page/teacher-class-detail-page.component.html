@@ -1,5 +1,5 @@
 <div style="display: flex;">
-    <div class="container">
+    <div class="container" style="width: 40%;">
         <h1>Class Detail</h1>
         <form method="post">
             <div class="form-group">
@@ -67,7 +67,7 @@
             </div> -->
         </form>
      </div>
-     <div class="container" style="height: fit-content !important;">
+     <div class="container" style="height: fit-content !important; width: 55%;">
         <div class="add-new-container">
             <div class="header">Class's Student List</div>
         </div>
@@ -77,29 +77,37 @@
                 <button class="search-button">Search</button>
             </div>
         </div>
-    
-        <table class="children-table">
+
+        <table class="taecher-children-table">
             <thead>
                 <tr>
                     <th>Student Name</th>
-                    <th>Gender</th>
+                    <th>Quiz 1 (10%)</th>
+                    <th>Quiz 2 (10%)</th>
+                    <th>Mid (30%)</th>
+                    <th>Final (50%)</th>
+                    <th>Avg</th>
+                    <th>Result</th>
                     <th>Action</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>S Name</td>
-                    <td>Gender</td>
-                    <td> 
-                        <a href="#">Detail</a> |
-                        <a href="#">Suspend</a>
-                    </td>
+                <tr *ngFor="let tran of listTrans">
+                    <td>{{tran.children.fullName}}</td>
+                    <td><input type="number" step="0.1" min="0" max="10" required value="{{tran.quiz1}}"></td>
+                    <td><input type="number" step="0.1" min="0" max="10" required value="{{tran.quiz2}}"></td>
+                    <td><input type="number" step="0.1" min="0" max="10" required value="{{tran.midterm}}"></td>
+                    <td><input type="number" step="0.1" min="0" max="10" required value="{{tran.final}}"></td>
+                    <td>{{tran.average}}</td>
+                    <td style="color: green;" *ngIf="tran.average >= 5">Pass</td>
+                    <td style="color: red;" *ngIf="tran.average < 5">Not Pass</td>
+                    <td style="cursor: pointer; color: #0056b3;" (click)="updateTrans($event.target, tran.id)"> Update </td>
                 </tr>
             </tbody>
         </table>
         <div class="btn-container">
             <a href="/teacher" class="btnClose">Close</a>
-            <button type="submit">Update</button>
+            <!-- <button type="submit">Update</button> -->
         </div>
-        </div>
+
 </div>

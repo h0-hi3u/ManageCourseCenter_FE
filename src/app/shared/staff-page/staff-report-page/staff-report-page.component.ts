@@ -56,4 +56,9 @@ export class StaffReportPageComponent implements OnInit {
         }
       });
   }
+  public goToReportChange(reportId: number) {
+    console.log("detail");
+    
+    this.router.navigate([`/staff/change-report/${reportId}`])
+  }
 }

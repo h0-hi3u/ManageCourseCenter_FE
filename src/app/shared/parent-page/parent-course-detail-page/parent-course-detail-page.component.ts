@@ -1,3 +1,4 @@
+import { FormBuilder } from '@angular/forms';
 import { FeedbackService } from 'src/app/core/services/feedback.service';
 import { HelperDate } from './../../../core/helpers/helperDate';
 import { Component, OnInit } from '@angular/core';
@@ -26,11 +27,10 @@ export class ParentCourseDetailPageComponent implements OnInit{
     private router: Router,
     public helperDate: HelperDate,
     private feedbackService: FeedbackService,
-    private childrenService: ChildrenService
+    private childrenService: ChildrenService,
+    private formBuilder: FormBuilder
   ) {}
   ngOnInit(): void {
-    console.log(this.currentDate);
-    
       const listUrl = this.router.url.split('/');
       const parentId = localStorage.getItem('parentId') || '';
       this.courseId = listUrl[listUrl.length - 1];
@@ -43,9 +43,12 @@ export class ParentCourseDetailPageComponent implements OnInit{
         this.listFeedback = res.data;
       })
       this.childrenService.getNotEnrolled(parentId, this.courseId).subscribe((res: ResponseDto) => {
-        console.log(res);
-        
         this.listChild = res.data;
       })
+  }
+  public goToRegisterCourse(courseId: string) {
+    console.log("register");
+    
+    this.router.navigate([`/parent/register-class/${courseId}`]);
   }
 }

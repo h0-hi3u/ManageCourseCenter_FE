@@ -62,6 +62,8 @@ import { ParentProfilePageComponent } from './shared/parent-page/parent-profile-
 import { ParentUpdateChildrenPageComponent } from './shared/parent-page/parent-update-children-page/parent-update-children-page.component';
 import { ParentCoursePageComponent } from './shared/parent-page/parent-course-page/parent-course-page.component';
 import { ParentCourseDetailPageComponent } from './shared/parent-page/parent-course-detail-page/parent-course-detail-page.component';
+import { ParentRegisterCoursePageComponent } from './shared/parent-page/parent-register-course-page/parent-register-course-page.component';
+import { StaffChangeReportPageComponent } from './shared/staff-page/staff-change-report-page/staff-change-report-page.component';
 
 const routes: Routes = [
   {
@@ -138,6 +140,7 @@ const routes: Routes = [
       { path: 'profile', component: ParentProfilePageComponent},
       { path: 'children-profile/:id', component: ParentUpdateChildrenPageComponent},
       { path: 'course-detail/:id', component: ParentCourseDetailPageComponent},
+      { path: 'register-class/:id', component: ParentRegisterCoursePageComponent}
     ],
   },
   {
@@ -149,7 +152,8 @@ const routes: Routes = [
       { path: 'activity', component: StaffEquipmentActivityPageComponent},
       { path: 'equipment', component: StaffEquipmentPageComponent},
       { path: 'profile', component: StaffProfilePageComponent},
-      { path: 'detail-room/:id', component: StaffDetailRoomPageComponent}
+      { path: 'detail-room/:id', component: StaffDetailRoomPageComponent},
+      { path: 'change-report/:id', component: StaffChangeReportPageComponent}
     ],
   },
   {

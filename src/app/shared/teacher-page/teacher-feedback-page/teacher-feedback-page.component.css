@@ -471,4 +471,35 @@ tr:hover {
 .button-move-page:hover {
     background-color: gray;
     color: white;
+}.rating-stars {
+    display: flex;
+    /* margin-left: 20px; */
+}
+
+.rating-stars input[type="radio"] {
+    display: none;
+}
+
+.rating-stars label {
+    font-size: 30px;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.3s;
+    margin-right: 5px;
+}
+
+.rating-stars input[type="radio"]:checked~label {
+    color: #f39c12;
+}
+
+.rating-stars input[name="rating_course"]:checked~label {
+    color: #f39c12;
+}
+
+.rating-stars input[name="rating_teacher"]:checked~label {
+    color: #f39c12;
+}
+
+.rating-stars input[name="rating_equipment"]:checked~label {
+    color: #f39c12;
 }

@@ -11,6 +11,7 @@ export class ClassService {
     private readonly urlGetClassByTeacherId = 'Class/get-class-teacher-by-id';
     private readonly urlGetClassByChildrenId = 'Class/get-class-by-children-id';
     private readonly urlGetClassById = 'Class/get-class-id';
+    private readonly urlGetClassByCourseId = 'Class/get-class-courseId';
     constructor(private http: HttpClient) {}
     public getClassByTeacherId(teacherId: string, pageSize: number, pageIndex: number) :Observable<ResponseDto> {
         return this.http.get<ResponseDto>(
@@ -27,4 +28,9 @@ export class ClassService {
             `${environment.urlApi}/${this.urlGetClassById}?id=${classId}`
         )
     }
-}
+    public getClassByCourseId(courseId: string) : Observable<ResponseDto> {
+        return this.http.get<ResponseDto>(
+            `${environment.urlApi}/${this.urlGetClassByCourseId}?courseId=${courseId}`
+        )
+    }
+} 

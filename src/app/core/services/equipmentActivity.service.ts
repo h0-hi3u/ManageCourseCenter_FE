@@ -10,6 +10,7 @@ import { environment } from "src/environment/environment";
 export class EquipmentActivityService {
     private readonly urlGetAll = 'EquipmentActivity/get-all';
     private readonly urlGetAllPaging = 'EquipmentActivity/get-all-equipment-paging';
+    private readonly urlChange = 'EquipmentActivity/change-equipment';
     constructor(private http: HttpClient) {
 
     }
@@ -21,6 +22,11 @@ export class EquipmentActivityService {
     public getAllPaging(pageSize: number, pageIndex: number) : Observable<ResponseDto> {
         return this.http.get<ResponseDto>(
             `${environment.urlApi}/${this.urlGetAllPaging}?pageSize=${pageSize}&pageIndex=${pageIndex}`
+        )
+    }
+    public changeActivity(oldId: string, newId: string, managerId: string) : Observable<ResponseDto>{
+        return this.http.put<ResponseDto>(
+            `${environment.urlApi}/${this.urlChange}?oldEquipmentId=${oldId}&newEquipmentId=${newId}&managerId=${managerId}`, ''
         )
     }
 }

@@ -11,6 +11,7 @@ import { environment } from "src/environment/environment";
 export class ReportService {
     private readonly urlGetReportByTeacherId = 'EquipmentReport/get-report-by-teacher-id';
     private readonly urlCreateReport = 'EquipmentReport/create-equipment-report';
+    private readonly urlGetReportById = 'EquipmentReport/get-equip-report-by-id';
     constructor(private http: HttpClient) {}
 
     public getReportByTeacherId(teacherId: number, pageSize: number, pageIndex: number) : Observable<ResponseDto> {
@@ -21,6 +22,11 @@ export class ReportService {
     public createReport(equipmentReportCreateDto: EquipmentReportCreateDto): Observable<ResponseDto> {
         return this.http.post<ResponseDto>(
             `${environment.urlApi}/${this.urlCreateReport}`, equipmentReportCreateDto
+        )
+    }
+    public getReportById(reportId: number): Observable<ResponseDto> {
+        return this.http.get<ResponseDto>(
+            `${environment.urlApi}/${this.urlGetReportById}?id=${reportId}`
         )
     }
 }

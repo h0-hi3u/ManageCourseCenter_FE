@@ -11,6 +11,8 @@ export class EquipmentService {
     private readonly urlGetEquipmentByRoomId = 'Equipment/get-equipment-by-room-id';
     private readonly urlGetAllEquipment = 'Equipment/get-all';
     private readonly urlGetAllPaging = 'Equipment/get-equipment-all-paging';
+    private readonly urlGetEquipmentType = 'Equipment/get-equipment-type-and-status-availalbe';
+
     constructor(private http: HttpClient) {}
     public getEquipmentByRoomId(roomId: string) : Observable<ResponseDto> {
         return this.http.get<ResponseDto>(
@@ -27,4 +29,10 @@ export class EquipmentService {
             `${environment.urlApi}/${this.urlGetAllPaging}?pageSize=${pageSize}&pageIndex=${pageIndex}`
         )
     }
+    public getEquipmentType(type: number) : Observable<ResponseDto> {
+        return this.http.get<ResponseDto>(
+            `${environment.urlApi}/${this.urlGetEquipmentType}?type=${type}`
+        )
+    }
+
 }

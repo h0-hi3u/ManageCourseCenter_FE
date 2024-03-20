@@ -1,0 +1,20 @@
+<div class="container">
+    <h1>Change Equipment</h1>
+    <div style="color: red; font-size: 18px; font-weight: 700; text-align: center;" *ngIf="messageFail != ''">{{messageFail}}</div>
+    <form method="post" [formGroup]="changeFrom" (ngSubmit)="submit()">
+        <div class="form-group">
+            <label for="oldequip">Old Equipment</label>
+            <input type="text" id="oldequip" name="oldequip" value="{{report.equipment.name}}" readonly>
+        </div>
+        <div class="form-group">
+            <label for="newequip">New Equipment</label>
+            <select name="newequip" id="newequip" formControlName="newId" [ngClass]="{'invalid' : changeFrom.get('newId')?.invalid && changeFrom.get('newId')?.touched}">
+                <option value="{{equip.id}}" *ngFor="let equip of listEquip">{{equip.name}}</option>
+            </select>
+        </div>
+        <div class="btn-container" style="display: flex; justify-content: space-between;">
+            <button type="submit" style="margin: 0 !important;">Change</button>
+            <a href="/staff" class="btnClose">Close</a>
+        </div>
+    </form>
+</div>

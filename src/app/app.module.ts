@@ -70,6 +70,8 @@ import { ParentProfilePageComponent } from './shared/parent-page/parent-profile-
 import { ParentUpdateChildrenPageComponent } from './shared/parent-page/parent-update-children-page/parent-update-children-page.component';
 import { ParentCoursePageComponent } from './shared/parent-page/parent-course-page/parent-course-page.component';
 import { ParentCourseDetailPageComponent } from './shared/parent-page/parent-course-detail-page/parent-course-detail-page.component';
+import { ParentRegisterCoursePageComponent } from './shared/parent-page/parent-register-course-page/parent-register-course-page.component';
+import { StaffChangeReportPageComponent } from './shared/staff-page/staff-change-report-page/staff-change-report-page.component';
 
 @NgModule({
   declarations: [
@@ -137,6 +139,8 @@ import { ParentCourseDetailPageComponent } from './shared/parent-page/parent-cou
     ParentUpdateChildrenPageComponent,
     ParentCoursePageComponent,
     ParentCourseDetailPageComponent,
+    ParentRegisterCoursePageComponent,
+    StaffChangeReportPageComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,44 @@
+<div class="course-container">
+    <h3>Register Course Detail</h3>
+    <div style="color: red; font-size: 18px; font-weight: 700; text-align: center;" *ngIf="registerFail != ''">{{registerFail}}</div>
+    <div style="color: green; font-size: 18px; font-weight: 700; text-align: center;" *ngIf="registerSuccess != ''">{{registerSuccess}}</div>
+
+    <div class="course-items">
+        <div class="course-item">
+            <img src="../../../assets/img/courses-6.jpg" alt="Course 1">
+            <form class="item-details" [formGroup]="childrenClassForm" >
+                <h4>{{course.name}}</h4>
+                <div class="form-group">
+                    <label for="className">Choose class</label>
+                    <select name="className" id="className" formControlName="classId" [ngClass]="{'invalid' : childrenClassForm.get('classId')?.invalid && childrenClassForm.get('classId')?.touched}">
+                        <option *ngFor="let class of listClass" value="{{class.id}}">{{class.name}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="childrenName">Choose children</label>
+                    <select name="childrenName" id="childrenName" formControlName="childrenId" [ngClass]="{'invalid' : childrenClassForm.get('childrenId')?.invalid && childrenClassForm.get('childrenId')?.touched}">
+                        <option *ngFor="let child of listChild" value="{{child.id}}">{{child.fullName}}</option>
+                        <option hidden *ngIf="listChild.length < 1">All your children learnt</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- <h3>Payment Method</h3>
+    <div class="payment-method">
+        <input type="radio" id="creditCard" name="paymentMethod" value="creditCard">
+        <label for="creditCard">Credit Card</label>
+    </div>
+    <div class="payment-method">
+        <input type="radio" id="paypal" name="paymentMethod" value="paypal">
+        <label for="paypal">PayPal</label>
+    </div>
+    <div class="payment-method">
+        <input type="radio" id="momo" name="paymentMethod" value="momo">
+        <label for="applePay">MoMo</label>
+    </div> -->
+    <div class="course-total">
+        <h4>Total: ${{course.price}}</h4>
+        <button class="checkout-button" (click)="submit()" [disabled]="childrenClassForm.invalid">Checkout</button>
+    </div>
+</div>

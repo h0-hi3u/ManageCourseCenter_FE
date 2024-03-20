@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Equipment</title>
+    <link rel="stylesheet" href="detail.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Change Equipment</h1>
+        <form method="post">
+            <div class="form-group">
+                <label for="oldequip">Old Equipment</label>
+                <input type="text" id="oldequip" name="oldequip" value="Old Equipment" readonly>
+            </div>
+            <div class="form-group">
+                <label for="newequip">New Equipment</label>
+                <select name="newequip" id="newequip" required>
+                    <option value="equipment1">Equipment1</option>
+                    <option value="equipment2">Equipment2</option>
+                </select>
+            </div>
+            <div class="btn-container">
+                <a href="#" class="btnClose">Close</a>
+                <button type="submit">Change</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

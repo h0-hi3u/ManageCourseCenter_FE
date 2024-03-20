@@ -437,3 +437,17 @@ tr:hover {
 .course-table td:nth-child(3) {
     width: 20%;
 }
+
+.children-transcript-table th:first-child,
+.children-transcript-table td:first-child {
+    width: 40%;
+}
+
+.children-transcript-table th:last-child,
+.children-transcript-table td:last-child,
+.children-transcript-table th:nth-child(2),
+.children-transcript-table td:nth-child(2),
+.children-transcript-table th:nth-child(3),
+.children-transcript-table td:nth-child(3) {
+    width: 20%;
+}
